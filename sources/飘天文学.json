@@ -1,0 +1,36 @@
+{
+    "name": "飘天文学",
+    "url": "m.piaotian.org",
+    "version": 100,
+    "search": {
+        "url": "https://www.piaotian.org/modules/article/search.php?searchkey=${key}@header->Cookie:jieqiVisitTime=jieqiArticlesearchTime%3D1652641695@header->Referer:https://m.piaotian.org/",
+        "charset": "GBK",
+        "list": "tbody > tr",
+        "name": "td:nth-child(1) > a",
+        "author": "td:nth-child(3)",
+        "cover": "img",
+        "detail": "td:nth-child(1) > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "category": "meta[property=og:novel:category]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "dd",
+        "name": "a",          
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": [
+            "飘天文学 .*最新章节！"            
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }        
+}

@@ -1,0 +1,37 @@
+{
+    "name": "笔下文学",
+    "url": "www.99bxwx.com",
+    "version": 103,
+    "search": {
+        "url": "https://www.99bxwx.com/search.html@post->searchtype=all&searchkey=${key}@header->cookie:sex=boy@header->referer:https://www.99bxwx.com/",
+        "charset": "UTF-8",
+        "list": "#sitembox > dl",
+        "name": "h3 > a",
+        "author": ".book_other > span:nth-child(1)",
+        "cover": "img",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "category":"meta[property=og:novel:category]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "dl>dd",
+        "name": "dd>a",          
+        "chapter": "dd>a@attr->href"        
+    },
+    "chapter": {
+        "content": "div#content",
+        "page":"a#A3:matches(下一页)",
+        "purify": [
+            "喜欢.*请大家收藏：.*","第.*章.*"            
+        ]     
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+    }    
+}

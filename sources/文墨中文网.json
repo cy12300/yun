@@ -1,0 +1,37 @@
+{
+  "name": "文墨中文网",
+  "url": "maxreader.net",
+  "version": 103,
+  "search": {
+    "url": "https://www.maxreader.net/search/result.html?searchkey=${key}@header->cookie:Hm_lvt_d8f721cb9262084cbce4c31b130a32ff=1648938050; clickbids=%2C2082%2C10859; Hm_lpvt_d8f721cb9262084cbce4c31b130a32ff=1648939123",
+    "charset": "UTF-8",
+    "list": "div.relative.pt-rank > div.pt-rank-detail",
+    "name": "span.fl.mr60 > a.size18.color2",
+    "author": "span.mr30 > a",
+    "cover": "img",
+    "detail": "span.fl.mr60 > a.size18.color2"
+  },
+  "detail": {
+    "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "category": "meta[property=og:novel:category]@attr->content",
+    "update": "meta[property=og:novel:update_time]@attr->content",
+    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+    "catalog": "a:matches(打开完整目录列表)"
+  },
+  "catalog": {
+    "list": "h3:matches(正文) ~ li",
+    "name": "a",
+    "chapter": "a"
+  },
+  "chapter": {
+    "content": "div.size16.color5.pt-read-text",
+    "page":"a:matches(下一页)",
+    "purify": [
+      "百度一下.*最新章节第一时间免费阅读。"
+    ]
+  },
+  "auth": {
+    "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+  }
+}

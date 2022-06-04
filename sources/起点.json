@@ -1,0 +1,240 @@
+{
+    "name": "起点",
+    "url": "www.qidian.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.qidian.com/soushu/${key}.html",
+        "charset": "UTF-8",
+        "list": "ul>li",
+        "name": "h2 > a",
+        "author": "p.author > a",  
+        "cover": "a > img",
+        "detail": "a@attr->href"
+    },
+    "detail": {
+        "category":"p.intro",
+        "status": "p.tag > span.blue",
+        "summary": "div.book-intro > p",
+        "update": "p.cf.charpter-container > a@attr->alt@match->(?<=首发时间:)(.+)",
+        "lastChapter": "p.cf.charpter-container > a",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "div.volume-wrap > div.volume",
+        "booklet": {
+            "name": "h3",
+            "list": "ul.cf > li"
+        },
+        "name": "h2.book_name > a",
+        "chapter": "h2.book_name > a@attr->href"
+    },
+    "chapter": {
+        "content": "div.read-content"             
+    },
+        "rank": [
+        {
+            "title":"男频排行榜",
+            "url": "https://druid.if.qidian.com/Atom.axd/Api/Tops/GetTopBooks?topId=${key}&pageIndex=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "0", "value": "风云榜"}, {"key": "65", "value": "畅销榜"}, {"key": "2", "value": "点击榜"}, {"key": "3", "value": "推荐榜"}, {"key": "23", "value": "打赏榜"}, {"key": "59", "value": "更新榜"}, {"key": "6", "value": "签约榜"}, {"key": "60", "value": "新书榜"}, {"key": "7", "value": "新人榜"}, {"key": "100", "value": "红包榜"}, {"key": "200", "value": "书单榜"}],
+            "list": "$.Data.*",
+            "name": "BookName",
+            "author": "Author",
+            "cover": "http://qidian.qpic.cn/qdbimg/349573/${$.BookId}/180",      		
+            "detail": "https://book.qidian.com/info/${$.BookId}/"
+        },
+        {
+            "title":"女频排行榜",
+            "url": "https://druid.if.qidian.com/Atom.axd/Api/Tops/GetTopBooks?topId=${key}&pageIndex=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "64", "value": "畅销榜"}, {"key": "48", "value": "完本榜"}, {"key": "66", "value": "更新榜"}, {"key": "61", "value": "免费榜"}, {"key": "10", "value": "风云榜"}, {"key": "62", "value": "打赏榜"}, {"key": "63", "value": "收藏榜"}, {"key": "8", "value": "点击榜"}, {"key": "9", "value": "推荐榜"}, {"key": "103", "value": "红包榜"}, {"key": "203", "value": "书单榜"}],
+            "list": "$.Data.*",
+            "name": "BookName",
+            "author": "Author",
+            "cover": "http://qidian.qpic.cn/qdbimg/349573/${$.BookId}/180",      		
+            "detail": "https://book.qidian.com/info/${$.BookId}/"
+        },
+        {
+            "title":"玄幻",
+            "url": "https://www.qidian.com/all/chanId21${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId8", "value": "东方玄幻"}, {"key": "-subCateId73", "value": "异世大陆"}, {"key": "-subCateId58", "value": "王朝争霸"}, {"key": "-subCateId78", "value": "高武世界"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"奇幻",
+            "url": "https://www.qidian.com/all/chanId1${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId38", "value": "现代魔法"}, {"key": "-subCateId62", "value": "剑与魔法"}, {"key": "-subCateId201", "value": "史诗奇幻"}, {"key": "-subCateId202", "value": "黑暗幻想"}, {"key": "-subCateId20092", "value": "历史神话"}, {"key": "-subCateId20093", "value": "另类幻想"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"武侠",
+            "url": "https://www.qidian.com/all/chanId2${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId20100", "value": "武侠同人"}, {"key": "-subCateId20099", "value": "古武未来"}, {"key": "-subCateId5", "value": "传统武侠"}, {"key": "-subCateId30", "value": "武侠幻想"}, {"key": "-subCateId206", "value": "国术无双"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"仙侠",
+            "url": "https://www.qidian.com/all/chanId22${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId20101", "value": "古典仙侠"}, {"key": "-subCateId18", "value": "修真文明"}, {"key": "-subCateId44", "value": "幻想修仙"}, {"key": "-subCateId64", "value": "现代修真"}, {"key": "-subCateId207", "value": "神话修真"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"都市",
+            "url": "https://www.qidian.com/all/chanId4${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId151", "value": "娱乐明星"}, {"key": "-subCateId16", "value": "都市异能"}, {"key": "-subCateId153", "value": "商场职战"}, {"key": "-subCateId74", "value": "异术超能"}, {"key": "-subCateId130", "value": "青春校园"}, {"key": "-subCateId12", "value": "都市生活"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"现实",
+            "url": "https://www.qidian.com/all/chanId15${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId20104", "value": "社会乡土"}, {"key": "-subCateId209", "value": "现实百态"}, {"key": "-subCateId6", "value": "爱情婚姻"}, {"key": "-subCateId20108", "value": "青春文学"}, {"key": "-subCateId20107", "value": "成功励志"}, {"key": "-subCateId20106", "value": "文学艺术"}, {"key": "-subCateId20105", "value": "生活时尚"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"历史",
+            "url": "https://www.qidian.com/all/chanId5${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId22", "value": "架空历史"}, {"key": "-subCateId48", "value": "秦汉三国"}, {"key": "-subCateId220", "value": "上古先秦"}, {"key": "-subCateId222", "value": "两晋隋唐"}, {"key": "-subCateId223", "value": "五代十国"}, {"key": "-subCateId224", "value": "两宋元明"}, {"key": "-subCateId225", "value": "清史民国"}, {"key": "-subCateId226", "value": "外国历史"}, {"key": "-subCateId32", "value": "历史传记"}, {"key": "-subCateId20094", "value": "民间传说"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"军事",
+            "url": "https://www.qidian.com/all/chanId6${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId54", "value": "军旅生涯"}, {"key": "-subCateId65", "value": "军事战争"}, {"key": "-subCateId80", "value": "战争幻想"}, {"key": "-subCateId230", "value": "抗战烽火"}, {"key": "-subCateId231", "value": "谍战特工"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"游戏",
+            "url": "https://www.qidian.com/all/chanId7${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId240", "value": "游戏异界"}, {"key": "-subCateId20103", "value": "游戏主播"}, {"key": "-subCateId20102", "value": "游戏系统"}, {"key": "-subCateId7", "value": "电子竞技"}, {"key": "-subCateId70", "value": "虚拟网游"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"体育",
+            "url": "https://www.qidian.com/all/chanId8${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId28", "value": "篮球运动"}, {"key": "-subCateId55", "value": "体育赛事"}, {"key": "-subCateId82", "value": "足球运动"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"科幻",
+            "url": "https://www.qidian.com/all/chanId9${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId253", "value": "末世危机"}, {"key": "-subCateId21", "value": "古武机甲"}, {"key": "-subCateId25", "value": "未来世界"}, {"key": "-subCateId68", "value": "星际文明"}, {"key": "-subCateId250", "value": "超级科技"}, {"key": "-subCateId251", "value": "时空穿梭"}, {"key": "-subCateId252", "value": "进化变异"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"悬疑",
+            "url": "https://www.qidian.com/all/chanId10${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId26", "value": "诡秘悬疑"}, {"key": "-subCateId35", "value": "奇妙世界"}, {"key": "-subCateId57", "value": "侦探推理"}, {"key": "-subCateId260", "value": "探险生存"}, {"key": "-subCateId20095", "value": "古今传奇"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"轻小说",
+            "url": "https://www.qidian.com/all/chanId12${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId60", "value": "原生幻想"}, {"key": "-subCateId66", "value": "恋爱日常"}, {"key": "-subCateId281", "value": "衍生同人"}, {"key": "-subCateId282", "value": "搞笑吐槽"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"短篇",
+            "url": "https://www.qidian.com/all/chanId20076${key}-page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "-subCateId20096", "value": "短篇小说"}, {"key": "-subCateId20079", "value": "美文游记"}, {"key": "-subCateId20078", "value": "生活随笔"}, {"key": "-subCateId20077", "value": "评论文集"}, {"key": "-subCateId20097", "value": "诗歌散文"}, {"key": "-subCateId20098", "value": "人物传记"}, {"key": "-subCateId20075", "value": "影视剧本"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        },
+        {
+            "title":"标签",
+            "url": "https://www.qidian.com/all/${key}page${page}/",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "", "value": "全部"}, {"key": "tag豪门-", "value": "豪门"}, {"key": "tag孤儿-", "value": "孤儿"}, {"key": "tag盗贼-", "value": "盗贼"}, {"key": "tag特工-", "value": "特工"}, {"key": "tag黑客-", "value": "黑客"}, {"key": "tag明星-", "value": "明星"}, {"key": "tag特种兵-", "value": "特种兵"},{"key": "tag杀手-", "value": "杀手"}, {"key": "tag老师-", "value": "老师"}, {"key": "tag学生-", "value": "学生"}, {"key": "tag胖子-", "value": "胖子"}, {"key": "tag宠物-", "value": "宠物"}, {"key": "tag蜀山-", "value": "蜀山"}, {"key": "tag魔王附体-", "value": "魔王附体"}, {"key": "tagLOL-", "value": "LOL"}, {"key": "tag废材流-", "value": "废材流"}, {"key": "tag护短-", "value": "护短"}, {"key": "tag卡片-", "value": "卡片"}, {"key": "tag手游-", "value": "手游"}, {"key": "tag法师-", "value": "法师"}, {"key": "tag医生-", "value": "医生${key}"}, {"key": "tag感情-", "value": "感情"}, {"key": "tag鉴宝-", "value": "鉴宝"}, {"key": "tag亡灵-", "value": "亡灵"}, {"key": "tag职场-", "value": "职场"}, {"key": "tag吸血鬼-", "value": "吸血鬼"}, {"key": "tag龙-", "value": "龙"}, {"key": "tag西游-", "value": "西游"}, {"key": "tag鬼怪-", "value": "鬼怪"}, {"key": "tag阵法-", "value": "阵法"}, {"key": "tag魔兽-", "value": "魔兽"}, {"key": "tag勇猛-", "value": "勇猛"}, {"key": "tag玄学-", "value": "玄学"}, {"key": "tag群穿-", "value": "群穿"}, {"key": "tag丹药-", "value": "丹药"}, {"key": "tag练功流-", "value": "练功流"}, {"key": "tag召唤流-", "value": "召唤流"}, {"key": "tag恶搞-", "value": "恶搞"}, {"key": "tag爆笑-", "value": "爆笑"}, {"key": "tag轻松-", "value": "轻松"}, {"key": "tag冷酷-", "value": "冷酷"}, {"key": "tag腹黑-", "value": "腹黑"}, {"key": "tag阳光-", "value": "阳光"}, {"key": "tag狡猾-", "value": "狡猾"}, {"key": "tag机智-", "value": "机智"}, {"key": "tag猥琐-", "value": "猥琐"}, {"key": "tag嚣张-", "value": "嚣张"}, {"key": "tag淡定-", "value": "淡定"}, {"key": "tag僵尸-", "value": "僵尸"}, {"key": "tag丧尸-", "value": "丧尸"}, {"key": "tag盗墓-", "value": "盗墓"}, {"key": "tag随身流-", "value": "随身流"}, {"key": "tag软饭流-", "value": "软饭流"}, {"key": "tag无敌文-", "value": "无敌文"}, {"key": "tag异兽流-", "value": "异兽流"}, {"key": "tag系统流-", "value": "系统流"}, {"key": "tag洪荒流-", "value": "洪荒流"}, {"key": "tag学院流-", "value": "学院流"}, {"key": "tag位面-", "value": "位面"}, {"key": "tag铁血-", "value": "铁血"}, {"key": "tag励志-", "value": "励志"}, {"key": "tag坚毅-", "value": "坚毅"}, {"key": "tag变身-", "value": "变身"}, {"key": "tag强者回归-", "value": "强者回归"}, {"key": "tag赚钱-", "value": "赚钱"}, {"key": "tag争霸流-", "value": "争霸流"}, {"key": "tag种田文-", "value": "种田文"}, {"key": "tag宅男-", "value": "宅男"}, {"key": "tag无限流-", "value": "无限流"}, {"key": "tag技术流-", "value": "技术流"}, {"key": "tag凡人流-", "value": "凡人流"}, {"key": "tag热血-", "value": "热血"}, {"key": "tag重生-", "value": "重生"}, {"key": "tag穿越-", "value": "穿越"}],
+            "list": "ul.all-img-list.cf>li",
+            "name": "h2 > a",
+            "author": "a.name",
+            "cover": "img",      		
+            "detail": "div.book-img-box > a"
+        }
+    ]
+}

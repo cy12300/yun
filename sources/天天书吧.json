@@ -1,0 +1,36 @@
+{
+    "name": "天天书吧",
+    "url": "www.ttshuba.net",
+    "version": 100,
+    "search": {
+        "url": "http://www.ttshuba.net/search.html@post->s=articlename&searchkey=${key}&Submit=",
+        "charset": "UTF-8",
+        "list": "#alistbox",
+        "name": "h2 > a",
+        "author": "div.title > span@match->(?<=作者：)(.+)",
+        "cover": "img",
+        "detail": "h2 > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",               
+        "category":"meta[property=og:novel:category]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+		"update": "#info > p:nth-child(10)@match->(?<=更新时间：)(.+)",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "dd",
+        "name": "a",          
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content > p",
+        "purify": [
+            ""            
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }        
+}

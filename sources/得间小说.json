@@ -1,0 +1,157 @@
+{
+    "name": "得间小说",
+    "url": "m.idejian.com",
+    "version": 100,
+    "search": {
+        "url": "https://m.idejian.com/search/do?keyword=${key}",
+        "charset": "UTF-8",
+        "list": "ul > li",
+        "name": "div.book_name",
+        "author": "span.book_author",
+        "cover": "img",
+        "detail": "li > a"
+    },
+    "detail": {
+        "summary": "meta[name=description]@attr->content",               
+        "status": "span.title_more",        
+        "category":"dd.bk_author.z_ellipsis > span:nth-child(2)",
+        "words":"span.font_num",
+        "lastChapter": "div.read_progress > div:nth-child(2) > span.title",
+        "catalog": "div.catalog_wrap > div.title_wrap.clearfix > a"
+    },
+    "catalog": {        
+        "list": "div.catalog_list > a",
+        "name": "div.text",
+        "chapter": "a",
+        "page":"https://m.idejian.com/catalog?page=${div.next_btn.page_turn@attr->data-topage}&bookId=${div.catalog_select > select@attr->data-bid}"        
+    },
+    "chapter": {
+        "content": "div.h5_mainbody > p.bodytext",
+        "purify": [""]      
+    },
+    "auth": {
+        "header": "user-agent:Mozilla/5.0 (Linux; Android 10.0; wv) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.110 Mobile Safari/537.36 T7/10.3 SearchCraft/2.6.2 (Baidu; P1 7.0)"
+    },
+    "rank": [
+        {
+            "title":"排行榜(♂)",
+            "url": "https://m.idejian.com/top/nansheng?sectionId=${key}&page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "35549", "value": "热度榜"}, {"key": "35554", "value": "人气榜"}, {"key": "35555", "value": "潜力榜"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.book_info.z_ellipsis > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        },
+        {
+            "title":"排行榜(♀)",
+            "url": "https://m.idejian.com/top/nansheng?sectionId=${key}&page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "35558", "value": "热度榜"}, {"key": "35556", "value": "人气榜"}, {"key": "35557", "value": "潜力榜"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.book_info.z_ellipsis > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        },
+        {
+            "title":"新书入库(♂)",
+            "url": "https://m.idejian.com/bangdan/${key}?page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "35903", "value": "都市爽文"}, {"key": "35904", "value": "玄幻升级"}, {"key": "35905", "value": "灵异推理"}, {"key": "35906", "value": "科幻校园"}, {"key": "35907", "value": "历史军事"}, {"key": "35908", "value": "游戏竞技"}, {"key": "35909", "value": "你可能感兴趣的"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.info_wrap > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        },
+        {
+            "title":"新书入库(♀)",
+            "url": "https://m.idejian.com/bangdan/${key}?page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "35911", "value": "现言推荐"}, {"key": "35912", "value": "惊悚灵异"}, {"key": "35913", "value": "精彩古言"}, {"key": "35914", "value": "青春百合"}, {"key": "35915", "value": "人气必读"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.info_wrap > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        },                      
+        {
+            "title":"全部(♂)",
+            "url": "https://m.idejian.com/category?categoryId=${key}&resourcesId=8&page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "865", "value": "都市"}, {"key": "877", "value": "玄幻"}, {"key": "878", "value": "校园"}, {"key": "879", "value": "仙侠"}, {"key": "880", "value": "奇幻"}, {"key": "881", "value": "历史"}, {"key": "882", "value": "军事"}, {"key": "883", "value": "科幻"}, {"key": "884", "value": "武侠"}, {"key": "885", "value": "游戏"}, {"key": "886", "value": "竞技"}, {"key": "887", "value": "灵异"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.info_wrap_left.z_ellipsis > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        },
+        {
+            "title":"连载(♂)",
+            "url": "https://m.idejian.com/category?categoryId=${key}&resourcesId=8&filterInfo={%222%22:%22N%22}&page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "865", "value": "都市"}, {"key": "877", "value": "玄幻"}, {"key": "878", "value": "校园"}, {"key": "879", "value": "仙侠"}, {"key": "880", "value": "奇幻"}, {"key": "881", "value": "历史"}, {"key": "882", "value": "军事"}, {"key": "883", "value": "科幻"}, {"key": "884", "value": "武侠"}, {"key": "885", "value": "游戏"}, {"key": "886", "value": "竞技"}, {"key": "887", "value": "灵异"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.info_wrap_left.z_ellipsis > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        },
+        {
+            "title":"完本(♂)",
+            "url": "https://m.idejian.com/category?categoryId=${key}&resourcesId=8&filterInfo={%222%22:%22Y%22}&page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "865", "value": "都市"}, {"key": "877", "value": "玄幻"}, {"key": "878", "value": "校园"}, {"key": "879", "value": "仙侠"}, {"key": "880", "value": "奇幻"}, {"key": "881", "value": "历史"}, {"key": "882", "value": "军事"}, {"key": "883", "value": "科幻"}, {"key": "884", "value": "武侠"}, {"key": "885", "value": "游戏"}, {"key": "886", "value": "竞技"}, {"key": "887", "value": "灵异"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.info_wrap_left.z_ellipsis > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        },
+        {
+            "title":"全部(♀)",
+            "url": "https://m.idejian.com/category?categoryId=${key}&resourcesId=8&page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "870", "value": "现代言情"}, {"key": "888", "value": "古代言情"}, {"key": "890", "value": "青春校园"}, {"key": "891", "value": "同人作品"}, {"key": "893", "value": "惊悚恐怖"}, {"key": "894", "value": "次元专区"}, {"key": "889", "value": "幻想言情"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.info_wrap_left.z_ellipsis > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        },
+        {
+            "title":"连载(♀)",
+            "url": "https://m.idejian.com/category?categoryId=${key}&resourcesId=8&filterInfo={%222%22:%22N%22}&page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "870", "value": "现代言情"}, {"key": "888", "value": "古代言情"}, {"key": "890", "value": "青春校园"}, {"key": "891", "value": "同人作品"}, {"key": "893", "value": "惊悚恐怖"}, {"key": "894", "value": "次元专区"}, {"key": "889", "value": "幻想言情"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.info_wrap_left.z_ellipsis > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        }, 
+        {
+            "title":"完本(♀)",
+            "url": "https://m.idejian.com/category?categoryId=${key}&resourcesId=8&filterInfo={%222%22:%22Y%22}&page=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "870", "value": "现代言情"}, {"key": "888", "value": "古代言情"}, {"key": "890", "value": "青春校园"}, {"key": "891", "value": "同人作品"}, {"key": "893", "value": "惊悚恐怖"}, {"key": "894", "value": "次元专区"}, {"key": "889", "value": "幻想言情"}],
+            "list": "ul.v_list > li",
+            "name": "div.book_name.z_ellipsis",
+            "author": "div.info_wrap_left.z_ellipsis > span:nth-child(1)",
+            "cover": "img",
+            "detail": "li > a.list_item"
+        }      
+    ]    
+}

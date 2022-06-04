@@ -1,0 +1,34 @@
+{
+    "name": "xo小说",
+    "url": "m.23xo.com",
+    "version": 103,
+    "search": {
+        "url": "https://m.23xo.com/search/@post->searchtype=all&searchkey=${key}",
+        "charset": "UTF-8",
+        "list": ".bookbox",
+        "name": "h4 > div",
+        "author": ".author@match->(?<=作者：)(.+)",
+        "cover": "img",
+        "detail": ".bookbox > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "category":"meta[property=og:novel:category]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "#chapterlist > li",
+        "name": "a",          
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#WuXian",
+        "page":"a:matches(下一页)",
+        "purify": [
+            "xo小说.*","第.*章.*"          
+        ]      
+    }
+}

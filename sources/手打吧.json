@@ -1,0 +1,35 @@
+{
+    "name": "手打吧",
+    "url": "www.shouda88.com",
+    "version": 103,
+    "search": {
+        "url": "https://www.shouda88.com/search.html@post->searchkey=${key}@header->cookie:Hm_lvt_cfd376dafe28c86bdec84f3ced9da75c=1638538073;Hm_lpvt_cfd376dafe28c86bdec84f3ced9da75c=1638538095",
+        "charset": "UTF-8",
+        "list": "#alist > #alistbox",
+        "name": "h2 > a",
+        "author": "span > a",
+        "cover": "img",
+        "detail": "h2 > a@attr->href"
+    },
+    "detail": {
+        "summary": "div.intro",
+        "status": "div.top > span:nth-child(3)",
+        "category":"ul.bread-crumbs > li:nth-child(4) > a",
+        "update": "div.top > span:nth-child(4)@match->(?<=更新时间：)(.+)",
+        "lastChapter": "span.btopt > a",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": ".link_14 > dl:nth-child(n+2)",
+        "booklet": {
+            "name": "dt > b",
+            "list": "dd"
+        },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "div#content",
+        "purify": ["(喜欢).+(收藏：).+"]      
+    }
+}

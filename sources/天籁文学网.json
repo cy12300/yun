@@ -1,0 +1,35 @@
+{
+    "name": "天籁文学网",
+    "url": "m.23sk.com",
+    "version": 103,
+    "search": {
+        "url": "https://m.23sk.com/search.php?q=${key}",
+        "charset": "UTF-8",
+        "list": "div.result-list > div.result-item.result-game-item",
+        "name": "a.result-game-item-title-link > span",
+        "author": "p.result-game-item-info-tag > span",
+        "cover": "img",
+        "detail": "a.result-game-item-title-link"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "category":"meta[property=og:novel:category]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "ul.chapter > li",
+        "name": "a",          
+        "chapter": "a",
+        "page":"a:matches(下一页)"
+        
+    },
+    "chapter": {
+        "content": "#nr1",
+        "page":"a:matches(下一页)",
+        "filter": ["@ p.readinline"],
+        "purify": [""]      
+    }
+}

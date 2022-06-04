@@ -1,0 +1,233 @@
+{
+    "name": "九桃小说",
+    "url": "www.9taoxs.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.9taoxs.com/search.html@post->searchkey=${key}",
+		"charset": "utf-8",
+        "list": "ul> li",
+        "name": ".bookname",
+        "author": "p > a.author",
+        "cover": "a.bookimg > img",
+		"summary": "p.intro",
+        "detail": "a.bookname"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": ".content > p.intro",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": "p.action > a:nth-child(1)"
+    },
+    "catalog": {
+        "list": ".read > dl:nth-child(n+2)",
+        "booklet": {
+            "name": "dt > b",
+            "list": "dd"
+        },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content > p",
+        "purify": ["(九桃小说).+(老域名)","[(9txs.com)]","(被墙，请您牢记本站最新域名)","(rg)","您可以在百度里搜索.*"]
+    },
+    "rank": [
+        {
+            "title":"总点击榜",
+            "url": "http://www.9taoxs.com/top/allvisit/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"日点击榜",
+            "url": "http://www.9taoxs.com/top/dayvisit/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"周点击榜",
+            "url": "http://www.9taoxs.com/top/weekvisit/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"月点击榜",
+            "url": "http://www.9taoxs.com/top/monthvisit/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"总推荐榜",
+            "url": "http://www.9taoxs.com/top/allvote/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"日推荐榜",
+            "url": "http://www.9taoxs.com/top/dayvote/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"周推荐榜",
+            "url": "http://www.9taoxs.com/top/weekvote/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"月推荐榜",
+            "url": "http://www.9taoxs.com/top/monthvote/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"总收藏榜",
+            "url": "http://www.9taoxs.com/top/goodnum/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"总字数榜",
+            "url": "http://www.9taoxs.com/top/size/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"最新入库",
+            "url": "http://www.9taoxs.com/top/postdate/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"最近更新",
+            "url": "http://www.9taoxs.com/top/lastupdate/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"新书榜",
+            "url": "http://www.9taoxs.com/top/goodnew/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"强推榜",
+            "url": "http://www.9taoxs.com/top/toptime/${page}.html",
+            "page": 1,
+            "size": 50,
+            "list": "ul.rank.zoom > li.on",
+            "name": "li.on > a:nth-child(5)",
+            "author": "li.on > p:nth-child(10) > a",
+            "cover": "img",
+            "detail": "li.on > a:nth-child(5)"
+        },
+        {
+            "title":"全部",
+            "url": "http://www.9taoxs.com/library/0_${key}_0_${page}.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "0", "value": "全部"}, {"key": "1", "value": "玄幻奇幻"}, {"key": "2", "value": "武侠修真"}, {"key": "3", "value": "都市生活"}, {"key": "4", "value": "历史军事"}, {"key": "5", "value": "游戏竞技"}, {"key": "6", "value": "科幻未来"}, {"key": "7", "value": "悬疑灵异"}, {"key": "8", "value": "二次元"}, {"key": "9", "value": "经典短篇"}, {"key": "10", "value": "古代言情"}, {"key": "11", "value": "现代言情"}, {"key": "12", "value": "幻想奇缘"}, {"key": "13", "value": "浪漫青春"}, {"key": "14", "value": "网络情缘"}, {"key": "15", "value": "科幻空间"}, {"key": "16", "value": "恐怖灵异"}, {"key": "17", "value": "N次元"}, {"key": "18", "value": "言情美文"}, {"key": "19", "value": "其他类型"}],
+            "list": "ul.library > li",
+            "name": "a.bookname",
+            "author": "a.author",
+            "cover": "img",
+            "detail": "a.bookname"
+        },              
+        {
+            "title":"连载",
+            "url": "http://www.9taoxs.com/library/0_${key}_1_${page}.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "0", "value": "全部"}, {"key": "1", "value": "玄幻奇幻"}, {"key": "2", "value": "武侠修真"}, {"key": "3", "value": "都市生活"}, {"key": "4", "value": "历史军事"}, {"key": "5", "value": "游戏竞技"}, {"key": "6", "value": "科幻未来"}, {"key": "7", "value": "悬疑灵异"}, {"key": "8", "value": "二次元"}, {"key": "9", "value": "经典短篇"}, {"key": "10", "value": "古代言情"}, {"key": "11", "value": "现代言情"}, {"key": "12", "value": "幻想奇缘"}, {"key": "13", "value": "浪漫青春"}, {"key": "14", "value": "网络情缘"}, {"key": "15", "value": "科幻空间"}, {"key": "16", "value": "恐怖灵异"}, {"key": "17", "value": "N次元"}, {"key": "18", "value": "言情美文"}, {"key": "19", "value": "其他类型"}],
+            "list": "ul.library > li",
+            "name": "a.bookname",
+            "author": "a.author",
+            "cover": "img",
+            "detail": "a.bookname"
+        },
+        {
+            "title":"完本",
+            "url": "http://www.9taoxs.com/library/0_${key}_2_${page}.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "0", "value": "全部"}, {"key": "1", "value": "玄幻奇幻"}, {"key": "2", "value": "武侠修真"}, {"key": "3", "value": "都市生活"}, {"key": "4", "value": "历史军事"}, {"key": "5", "value": "游戏竞技"}, {"key": "6", "value": "科幻未来"}, {"key": "7", "value": "悬疑灵异"}, {"key": "8", "value": "二次元"}, {"key": "9", "value": "经典短篇"}, {"key": "10", "value": "古代言情"}, {"key": "11", "value": "现代言情"}, {"key": "12", "value": "幻想奇缘"}, {"key": "13", "value": "浪漫青春"}, {"key": "14", "value": "网络情缘"}, {"key": "15", "value": "科幻空间"}, {"key": "16", "value": "恐怖灵异"}, {"key": "17", "value": "N次元"}, {"key": "18", "value": "言情美文"}, {"key": "19", "value": "其他类型"}],
+            "list": "ul.library > li",
+            "name": "a.bookname",
+            "author": "a.author",
+            "cover": "img",
+            "detail": "a.bookname"
+        }        
+    ],
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }    
+}

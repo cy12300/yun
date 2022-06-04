@@ -1,0 +1,37 @@
+{
+    "name": "新热门小说",
+    "url": "m.xinremenxs.com",
+    "version": 100,
+    "search": {
+        "url": "https://m.xinremenxs.com/search.html@post->searchkey=${key}@header->Cookie:Hm_lvt_7fcb840f05292022d7891ede141cc33d=1625028707",
+        "charset": "UTF-8",
+        "list": "ul.list > li",
+        "name": ".bookname > a",
+        "author": ".data > a",
+        "cover": "img",
+        "detail": "a"
+    },
+    "detail": {
+        "status": "meta[property=og:novel:status]@attr->content",
+        "summary": "meta[name=description]@attr->content",                  
+        "category":"meta[property=og:novel:category]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": "li.now > a"
+    },
+    "catalog": {        
+        "list": "ul.read > li",
+        "name": "li > a",          
+        "chapter": "li > a",
+        "page":"div.pagelist > a:nth-child(3)"
+    },
+    "chapter": {
+        "content": ".content",
+        "purify": [
+            "(喜欢).+(收藏：).+"            
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }    
+}

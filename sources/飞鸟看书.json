@@ -1,0 +1,56 @@
+{
+    "name": "飞鸟看书",
+    "url": "app.xiaoshuo123456789.com:8765",
+    "version": 103,
+    "search": {
+        "url": "http://app.xiaoshuo123456789.com:8765/search/?searchkey=${key}",
+        "charset": "UTF-8",
+        "list": ".content > dl",
+        "name": "dt > a",
+        "author": "dd > a",
+        "cover": "img@attr->data-original",
+        "detail": "dt > a"
+    },
+    "detail": {
+        "summary": ".bookintro",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "category":"meta[property=og:novel:category]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ".bookchapter > a"
+    },
+    "catalog": {        
+        "list": "ul > li",
+        "name": "a",          
+        "chapter": "a",
+        "page":".index-container-btn:matches(下一页)"        
+    },
+    "chapter": {
+        "content": "#booktxt",
+        "page":"#next_url:matches(下一页)",
+        "purify": ["第.*章.*"]     
+               },
+    "rank":
+    [{
+            "title":"排行榜",
+            "url": "http://app.xiaoshuo123456789.com:8765/rank/${key}/",            
+            "categories": [{"value": "周点击榜","key": "weekvisit"}, {"value": "月点击榜","key": "monthvisit"}, {"value": "总点击榜","key": "allvisit"}, {"value": "总收藏榜","key": "goodnum"}],
+            "list": ".content > dl",
+        "name": "dt > a",
+        "author": "dd > a",
+        "cover": "img@attr->data-original",
+        "detail": "dt > a"
+        },
+        {
+            "title":"书库",
+            "url": "http://app.xiaoshuo123456789.com:8765/${key}${page}/",     
+            "page": 1,
+            "size": 50,      
+            "categories": [{"value": "全部小说","key": "class/"}, {"value": "玄幻魔法","key": "class/1/"}, {"value": "武侠仙侠","key": "class/2/"}, {"value": "都市言情","key": "class/3/"}, {"value": "历史军事","key": "class/4/"}, {"value": "网游竞技","key": "class/5/"}, {"value": "恐怖灵异","key": "class/6"}],
+            "list": ".content > dl",
+        "name": "dt > a",
+        "author": "dd > a",
+        "cover": "img@attr->data-original",
+        "detail": "dt > a"
+        }]          
+}

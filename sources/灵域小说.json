@@ -1,0 +1,36 @@
+{
+    "name": "灵域小说",
+    "url": "www.lingyutxt.net",
+    "version": 100,
+    "search": {
+        "url": "https://www.lingyutxt.net/search.php?%20keyword=${key}",
+        "charset": "UTF-8",
+        "list": "ul > li",
+        "name": "span.s2 > a",
+        "author": "span.s4 > a",
+        "cover": "img",
+        "detail": "span.s2 > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",               
+        "category":"meta[property=og:novel:category]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+		"update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "dl > dd",
+        "name": "a",          
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": [
+            "章节错误,点此报送.*","m.*t","m.*T","M.*t","M.*T","w.*t","W.*t","W.*T","w.*T","w.*M","w.*m","W.*m","W.*M","靈魊尛説",".*Ｔ.*t",".*t.*t",".*t.*T",".*Ｔ.*T","m.*m","m.*M","M.*m","M.*M"
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }        
+}

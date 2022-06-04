@@ -1,0 +1,30 @@
+{
+    "name": "大河小说",
+    "url": "api.rcwk.net",
+    "version": 105,
+    "search": {
+        "url": "https://api.rcwk.net/037/search.php?page_index=1&keyword=${key}&page_size=15",
+        "charset": "UTF-8",
+        "list": "$.Data.DataList[*]",
+        "name": "book_name",
+        "author": "book_author",
+        "cover": "book_img",
+        "detail": "https://api.rcwk.net/037/book.php?aid=${$.book_id}"
+    },
+    "detail": {                        
+        "status": "",
+        "category":"$..book_type_name",
+		"words":"$..book_word_num",  
+        "update": "$..create_time",
+        "lastChapter": "$..last_chaptername",
+        "catalog": "https://api.rcwk.net/037/chapters.php?page_index=&aid=${$..book_id}&order=asc&page_size=9999999"
+    },
+    "catalog": {        
+        "list": "$.Data.[*]",
+        "name": "chapter_name",          
+        "chapter": "https://api.rcwk.net/037/chapter.php?query_direction=current&aid=${$params.aid}&cid=${$.chapter_index}"
+    },
+    "chapter": {
+        "content": "$..chapter_content"
+    }
+}

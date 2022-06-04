@@ -1,0 +1,34 @@
+{
+    "name": "笔下看书",
+    "url": "www.bxwxorg.com",
+    "version": 103,
+    "search": {
+        "url": "https://www.bxwxorg.com/search.html@post->searchtype=all&searchkey=${key}&submit=@header->cookie:Hm_lvt_6fc4ff5f8f53a5c9ef0c1146ad0937f8=1633530970,1633531025,1633531030;Hm_lpvt_6fc4ff5f8f53a5c9ef0c1146ad0937f8=1633531030",
+        "charset": "UTF-8",
+        "list": "#sitembox > dl",
+        "name": "h3 > a",
+        "author": ".book_other > span:nth-child(1)",
+        "cover": "img",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "category":"meta[property=og:novel:category]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "dl>dd",
+        "name": "dd>a",          
+        "chapter": "dd>a@attr->href"
+    },
+    "chapter": {
+        "content": "div#content",
+        "page":"a#A3:matches(下一页)",
+        "purify": [
+            "您可以在百度里搜索.*",".*地址：https://.*",".*阅读：https://.*","为了方便下次阅读.*","喜欢(.+)请向你的朋友(.+)"          
+        ]      
+    }
+}

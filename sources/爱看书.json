@@ -1,0 +1,30 @@
+{
+    "name": "爱看书",
+    "url": "cxb-pro.cread.com",
+    "version": 103,
+    "search": {
+        "url": "https://cxb-pro.cread.com/cx/searchbooks@post->keyword=${key}&pageNo=1@header->uid:110496550@header->cnid:10005@header->version:7.6.0@header->packname:com.mianfeizs.book@header->oscode:30@header->vcode:134@header->channelId:10005@header->platform:android@header->appname:mfzs",
+        "charset": "UTF-8",
+        "list": "$.list",
+        "name": "$.name",
+        "author": "$.author",
+        "cover": "$.cover",
+        "detail": "https://readbook-service-freebook.cread.com/cx/bookDetailYS?bookid=${$.id}@header->uid:110496550@header->cnid:10005@header->version:7.6.0@header->packname:com.mianfeizs.book@header->oscode:30@header->vcode:134@header->channelId:10005@header->platform:android@header->appname:mfzs"
+    },
+    "detail": {
+        "summary": "$..bookVo.introduction",
+        "category":"$..bookVo.categoryName",
+        "words":"$..bookVo.wordCount",  
+        "update": "$..bookVo.updateDate",
+        "lastChapter": "$..bookVo.lastUpdateChapterName",
+        "catalog": "https://cxb-pro.cread.com/cx/itf/getvolume?bookId=${$..bookVo.bookId}@header->uid:110496550@header->cnid:10005@header->version:7.6.0@header->packname:com.mianfeizs.book@header->oscode:30@header->vcode:134@header->channelId:10005@header->platform:android@header->appname:mfzs"
+    },
+    "catalog": {        
+        "list": "$..bookChapters[*]",
+        "name": "$.name",
+        "chapter": "https://cxb-pro.cread.com:443/cx/itf/chapterRead?bookId=${$params.bookId}&chapterId=${$.id}&full=0@header->uid:110496550@header->cnid:10005@header->version:7.6.0@header->packname:com.mianfeizs.book@header->oscode:30@header->vcode:134@header->channelId:10005@header->platform:android@header->appname:mfzs"
+    },
+    "chapter": {
+        "content": "$..content"        
+    }
+}

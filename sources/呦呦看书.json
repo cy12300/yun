@@ -1,0 +1,37 @@
+{
+    "name": "呦呦看书",
+    "url": "www.youyoukanshu.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.youyoukanshu.com/search.php?search=${key}",
+        "charset": "UTF-8",
+        "list": "tbody > tr",
+        "name": "td.col-md-2.col-sm-8.col-xs-8 > a",
+        "author": "td.col-md-2.col-sm-4.col-xs-4",
+        "cover": "img",
+        "detail": "td.col-md-2.col-sm-8.col-xs-8 > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",               
+        "category":"meta[property=og:novel:category]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+		"update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "article.panel.panel-booklist.col-lg-12.col-md-12.col-xs-12.col-sm-12 > ul.list-group > li",
+        "name": "a",          
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".content",
+        "page":"",
+        "purify": [
+            ""            
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+    }        
+}

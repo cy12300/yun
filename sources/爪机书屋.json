@@ -1,0 +1,36 @@
+{
+    "name": "爪机书屋",
+    "url": "www.zjsw.org",
+    "version": 103,
+    "search": {
+        "url": "https://www.zjsw.org/search.html@post->searchkey=${key}@header->Referer:https://www.zjsw.org/@header->Cookie:Hm_lvt_d8d5a9ba80f9dd4b739fb81962edd42d=1649867719; Hm_lpvt_d8d5a9ba80f9dd4b739fb81962edd42d=1649867866@header->Origin:https://www.zjsw.org@header->Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "charset": "UTF-8",
+        "list": "#alist>#alistbox",
+        "name": "h2>a",
+        "author": ".title>span@replace->作者：->",
+        "cover": "img",
+        "detail": "h2>a"
+    },
+    "detail": {
+        "summary": "div.intro",
+        "status": "",
+        "category":"ul.bread-crumbs > li:nth-child(4) > a",
+        "update": "div.top > span:nth-child(2)@match->(?<=更新时间：)(.+)",
+        "lastChapter": "span.last > a",
+        "catalog": "span.btopt > a"
+    },
+    "catalog": {        
+        "list": "dl>dd",
+        "name": "dd>a",          
+        "chapter": "dd>a"
+    },
+    "chapter": {
+        "content": "div#content",
+        "purify": [
+            ""            
+        ]       
+    },
+      "auth": {
+    "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+  }
+}

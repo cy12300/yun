@@ -1,0 +1,90 @@
+{
+    "name": "搜小说",
+    "url": "m.soxscc.cc",
+    "version": 100,
+    "search": {
+        "url": "https://m.soxscc.net/search.html@post->searchkey=${key}@header->origin:https://m.soxscc.net@header->referer:https://m.soxscc.net/@header->cookie:Hm_lvt_3aa40a28f7cac015da093c26ba7cc19e=1648930069",
+        "charset": "UTF-8",
+        "list": ".list > li",
+        "name": "p.bookname > a",
+        "author": "p.data > a",
+        "cover": "img",
+        "detail": "li > a@attr->href"
+    },
+    "detail": {
+        "status": "div.detail > p > span.layui-btn.layui-btn-xs.layui-btn-radius.layui-btn-danger",
+        "words":"div.detail > p > span.layui-btn.layui-btn-xs.layui-bg-red",
+        "category":"div.detail > p > a.layui-btn.layui-btn-xs.layui-btn-radius",
+
+        "catalog": ".now > a@attr->href"
+    },
+    "catalog": {        
+        "list": ".read > li",
+        "name": "li > a",          
+        "chapter": "li > a@attr->href",
+        "page":"div.pagelist > a:nth-child(3)"
+    },
+    "chapter": {
+        "content": "div.content",
+        "purify": [
+            ".*请大家收藏.*"            
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Linux; Android 10.0; wv) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.110 Mobile Safari/537.36 T7/10.3 SearchCraft/2.6.2 (Baidu; P1 7.0)"
+    },
+    "rank": [
+        {
+            "title":"榜单",
+            "url": "https://m.soxscc.cc/top/${key}/${page}.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "lastupdate", "value": "最近更新"}, {"key": "allvisit", "value": "总点击榜"}, {"key": "allvote", "value": "总推荐榜"}, {"key": "goodnum", "value": "总收藏榜"}, {"key": "size", "value": "总字数榜"}, {"key": "toptime", "value": "总强推榜"}],
+            "list": ".list > li",
+            "name": ".bookname > a",
+            "author": "p.data > a",
+            "cover": "img",
+      		"summary": "p.intro",
+            "detail": "li > a@attr->herf"
+        },                      
+        {
+            "title":"全部",
+            "url": "https://m.soxs.cc/shuku/0_${key}_0_${page}.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "0", "value": "全部"}, {"key": "1", "value": "玄幻奇幻"}, {"key": "2", "value": "武侠仙侠"}, {"key": "3", "value": "科幻未来"}, {"key": "4", "value": "历史军事"}, {"key": "5", "value": "网游竞技"}, {"key": "6", "value": "悬疑灵异"}, {"key": "7", "value": "都市生活"}, {"key": "8", "value": "青春校园"}, {"key": "9", "value": "古代言情"}, {"key": "10", "value": "现代言情"}, {"key": "11", "value": "幻想奇缘"}, {"key": "12", "value": "耽美同人"}, {"key": "13", "value": "新书入库"}],
+            "list": ".list > li",
+            "name": ".bookname > a",
+            "author": "p.data > a",
+            "cover": "img",
+      		"summary": "p.intro",
+            "detail": "li > a@attr->herf"
+        },
+        {
+            "title":"连载",
+            "url": "https://m.soxs.cc/shuku/0_${key}_1_${page}.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "0", "value": "全部"}, {"key": "1", "value": "玄幻奇幻"}, {"key": "2", "value": "武侠仙侠"}, {"key": "3", "value": "科幻未来"}, {"key": "4", "value": "历史军事"}, {"key": "5", "value": "网游竞技"}, {"key": "6", "value": "悬疑灵异"}, {"key": "7", "value": "都市生活"}, {"key": "8", "value": "青春校园"}, {"key": "9", "value": "古代言情"}, {"key": "10", "value": "现代言情"}, {"key": "11", "value": "幻想奇缘"}, {"key": "12", "value": "耽美同人"}, {"key": "13", "value": "新书入库"}],
+            "list": ".list > li",
+            "name": ".bookname > a",
+            "author": "p.data > a",
+            "cover": "img",
+      		"summary": "p.intro",
+            "detail": "li > a@attr->herf"
+        },
+        {
+            "title":"完本",
+            "url": "https://m.soxs.cc/shuku/0_${key}_2_${page}.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "0", "value": "全部"}, {"key": "1", "value": "玄幻奇幻"}, {"key": "2", "value": "武侠仙侠"}, {"key": "3", "value": "科幻未来"}, {"key": "4", "value": "历史军事"}, {"key": "5", "value": "网游竞技"}, {"key": "6", "value": "悬疑灵异"}, {"key": "7", "value": "都市生活"}, {"key": "8", "value": "青春校园"}, {"key": "9", "value": "古代言情"}, {"key": "10", "value": "现代言情"}, {"key": "11", "value": "幻想奇缘"}, {"key": "12", "value": "耽美同人"}, {"key": "13", "value": "新书入库"}],
+            "list": ".list > li",
+            "name": ".bookname > a",
+            "author": "p.data > a",
+            "cover": "img",
+      		"summary": "p.intro",
+            "detail": "li > a@attr->herf"
+        }        
+    ]
+}

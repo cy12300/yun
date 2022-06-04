@@ -1,0 +1,35 @@
+{
+  "name": "格格党",
+  "url": "www.ax61.com",
+  "version": 103,
+  "search": {
+    "url": "https://www.ax61.com/search/@post->searchkey=${key}&searchtype=all&submit=",
+    "charset": "UTF-8",
+    "list": "section.SHsectionThree > div > p",
+    "name": "span:nth-child(2) > a",
+    "author": "span:nth-child(3) > a",
+    "cover": "img",
+    "detail": "span:nth-child(2) > a"
+  },
+  "detail": {
+    "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "category": "meta[property=og:novel:category]@attr->content",
+    "update": "p.time > span",
+    "lastChapter": "p.newestChapter > span > a",
+    "catalog": "a:matches(查看全部章节)"
+  },
+  "catalog": {
+    "list": "ol > li",
+    "name": "a",
+    "chapter": "a",
+    "page":"a:matches(下一页)"
+  },
+  "chapter": {
+    "content": "#content",
+    "page":"a:matches(下一页)",
+    "purify": [
+      "第.*章.*"
+    ]
+  }
+}

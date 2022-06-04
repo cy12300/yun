@@ -1,0 +1,34 @@
+{
+    "name": "52小说",
+    "url": "www.52xiaoshuo.com",
+    "version": 103,
+    "search": {
+        "url": "https://www.52xiaoshuo.com/search.html@post->searchkey=${key}",
+        "charset": "UTF-8",
+        "list": "ul > li",
+        "name": "p.s1 > a",
+        "author": "li > p.s3",
+        "detail": "p.s1 > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "category":"meta[property=og:novel:category]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "ul > li",
+        "name": "a",          
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content > p",
+        "purify": [
+            "一秒记住(.+)"          
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }    
+}

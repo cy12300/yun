@@ -1,0 +1,32 @@
+{
+    "name": "酷笔记",
+    "url": "m.kubiji.net",
+    "version": 100,
+    "search": {
+        "url": "https://m.kubiji.net/search.html@post->searchkey=${key}@header->cookie: Hm_lvt_2891e43d8c1a69f95a2bf26538b7c744=1629441221;Hm_lpvt_2891e43d8c1a69f95a2bf26538b7c744=1629841013",
+        "charset": "UTF-8",
+        "list": "ul.list > li",
+        "name": "p.bookname > a",
+        "author": "p.data > a",
+        "cover": "img",
+        "detail": "p.bookname > a"
+    },
+    "detail": {
+        "summary": "meta[name=description]@attr->content@match->(?<=下载：)(.+)",               
+        "status": "span.layui-btn.layui-btn-xs.layui-btn-radius.layui-btn-normal",        
+        "category":"a.layui-btn.layui-btn-xs.layui-btn-radius",
+		"update": "div.detail > p:nth-child(6)",
+        "lastChapter": "p.new > a",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "ul.read > li",
+        "name": "li > a",          
+        "chapter": "li > a",
+        "page":"div.pagelist > a:matches(下一页)"
+    },
+    "chapter": {
+        "content": "div.content",
+        "purify": ["请大家记得我们的网站：.*"]    
+    }
+}

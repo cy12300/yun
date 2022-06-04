@@ -1,0 +1,44 @@
+{
+    "name": "言情小说",
+    "url": "app.yqzw5.net",
+    "version": 103,
+    "search": {
+        "url": "https://app.yqzw5.net/json/api_search.php?searchkey=${key}",
+        "charset": "UTF-8",
+        "list": "$.result_rows[*]",
+        "name": "articlename",
+        "author": "author",
+        "cover": "img_url",
+        "detail": "https://app.yqzw5.net/json/api_info.php?aid=${articleid}"
+    },
+    "detail": {
+        "summary": "$.intro",
+        "category":"$.sortname",
+        "words":"$.words_w",  
+        "update": "$.lastupdate_fmt",
+        "lastChapter": "$.lastchapter",
+        "catalog": "https://app.yqzw5.net/json/api_indexlist.php?aid=${$.articleid}&per=20000&page=1"
+    },
+    "catalog": {        
+        "list": "$.chapterrows[*]",
+        "name": "$.chaptername",
+        "chapter": "https://app.yqzw5.net/json/api_read.php?aid=${$params.aid}&cid=${$.chapterid}"
+    },
+    "chapter": {
+        "content": "$..content",
+        "purify": ["一秒记住，精彩小说无弹窗免费阅读！"]
+    },
+    "rank":
+    [{
+            "title":"书库",
+            "url": "https://app.yqzw5.net/json/api_class_list.php?page=${page}&per=30&sortid=${key}",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value": "全部","key": "0"}, {"value": "玄幻小说","key": "1"}, {"value": "修真小说","key": "2"}, {"value": "都市小说","key": "3"}, {"value": "穿越小说","key": "4"}, {"value": "网游小说","key": "5"}, {"value": "科幻小说","key": "6"}, {"value": "其他小说","key": "7"}, {"value": "精选爽文","key": "8"}],
+            "list": "$..*",
+            "name": "$..articlename",
+            "author": "$.author",
+            "cover": "$.img_url",
+            "detail": "https://app.yqzw5.net/json/api_info.php?aid=${$.articleid}"
+        }]
+}

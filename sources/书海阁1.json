@@ -1,0 +1,32 @@
+{
+    "name": "书海阁1",
+    "url": "m.shg.tw",
+    "version": 100,
+    "search": {
+        "url": "http://m.shg.tw/search.html@post->searchkey=${key}@header->cookie:Hm_lvt_7fcb840f05292022d7891ede141cc33d=1630668141; Hm_lpvt_7fcb840f05292022d7891ede141cc33d=1630668169; Hm_lvt_d5d3bd0f9b7131252ffa9b9a688a2c19=1639194506; Hm_lpvt_d5d3bd0f9b7131252ffa9b9a688a2c19=1639194511",
+        "charset": "UTF-8",
+        "list": "ul.list > li",
+        "name": "p.bookname > a",
+        "author": "p.data > a",
+        "cover": "img",
+        "detail": "p.bookname > a"
+    },
+    "detail": {
+        "summary": "meta[name=description]@attr->content@match->(?<=下载：)(.+)",               
+        "status": "span.layui-btn.layui-btn-xs.layui-btn-radius.layui-btn-normal",        
+        "category":"a.layui-btn.layui-btn-xs.layui-btn-radius",
+		"update": "div.detail > p:nth-child(6)",
+        "lastChapter": "p.new > a",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "ul.read > li",
+        "name": "li > a",          
+        "chapter": "li > a",
+        "page":"div.pagelist > a:matches(下一页)"
+    },
+    "chapter": {
+        "content": "div.content",
+        "purify": ["喜欢.*请大家收藏：.*"]      
+    }
+}

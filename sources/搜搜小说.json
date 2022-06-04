@@ -1,0 +1,2473 @@
+{
+  "name": "搜搜小说",
+  "url": "https://m.soxscc.org",
+  "version": 100,
+  "search": {
+    "url": "https://m.soxscc.org/search.html@post->searchtype=all&searchkey=${key}@header->cookie:Hm_lvt_36a7679ef96873ad0b8eff88ae9b25eb=1646411772;Hm_lpvt_36a7679ef96873ad0b8eff88ae9b25eb=1646412116",
+    "charset": "UTF-8",
+    "list": "ul.list > li",
+    "name": ".bookname > a",
+    "author": ".data > a",
+    "cover": "a > img",
+    "detail": ".bookname > a"
+  },
+  "detail": {
+    "summary": "meta[name=description]@attr->content@match->(?<=txt下载：)(.+)",
+    "status": "p > span.layui-btn.layui-btn-xs.layui-btn-radius.layui-btn-danger",
+    "category": "p > a.layui-btn.layui-btn-xs.layui-btn-radius",
+    "words": "p > span.layui-btn.layui-btn-xs.layui-bg-red",
+    "update": "div.detail > p:nth-child(6)@match->(?<=最后更新：)(.+)",
+    "lastChapter": "p.new > a",
+    "catalog": ""
+  },
+  "catalog": {
+    "list": "ul.read > li",
+    "name": "a",
+    "chapter": "a",
+    "page": "a:matches(下一页)"
+  },
+  "chapter": {
+    "content": "div.content",
+    "purify": [
+      "(喜欢).+(收藏：).+"
+    ]
+  },
+  "auth": {
+    "header": "User-Agent:Mozilla/5.0 (Linux; Android 10.0; wv) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.110 Mobile Safari/537.36 T7/10.3 SearchCraft/2.6.2 (Baidu; P1 7.0)"
+  },
+  "rank": [
+    {
+      "title": "点击榜",
+      "url": "https://m.soxscc.info/top/${key}/${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "allvisit",
+          "value": "总榜"
+        },
+        {
+          "key": "monthvisit",
+          "value": "月榜"
+        },
+        {
+          "key": "weekvisit",
+          "value": "周榜"
+        },
+        {
+          "key": "dayvisit",
+          "value": "日榜"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "推荐榜",
+      "url": "https://m.soxscc.info/top/${key}/${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "allvote",
+          "value": "总榜"
+        },
+        {
+          "key": "monthvote",
+          "value": "月榜"
+        },
+        {
+          "key": "weekvote",
+          "value": "周榜"
+        },
+        {
+          "key": "dayvote",
+          "value": "日榜"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "其他榜",
+      "url": "https://m.soxscc.info/top/${key}/${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "goodnum",
+          "value": "总收藏榜"
+        },
+        {
+          "key": "size",
+          "value": "字数榜"
+        },
+        {
+          "key": "toptime",
+          "value": "强推榜"
+        },
+        {
+          "key": "goodnew",
+          "value": "新书榜"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "全部",
+      "url": "https://m.soxscc.info/shuku/0_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "连载",
+      "url": "https://m.soxscc.info/shuku/0_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "完本",
+      "url": "https://m.soxscc.info/shuku/0_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "总点击-全部",
+      "url": "https://m.soxscc.info/shuku/allvisit_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "总点击-连载",
+      "url": "https://m.soxscc.info/shuku/allvisit_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "总点击-完本",
+      "url": "https://m.soxscc.info/shuku/allvisit_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "月点击-全部",
+      "url": "https://m.soxscc.info/shuku/monthvisit_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "月点击-连载",
+      "url": "https://m.soxscc.info/shuku/monthvisit_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "月点击-完本",
+      "url": "https://m.soxscc.info/shuku/monthvisit_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "周点击-全部",
+      "url": "https://m.soxscc.info/shuku/weekvisit_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "周点击-连载",
+      "url": "https://m.soxscc.info/shuku/weekvisit_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "周点击-完本",
+      "url": "https://m.soxscc.info/shuku/weekvisit_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "日点击-全部",
+      "url": "https://m.soxscc.info/shuku/dayvisit_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "日点击-连载",
+      "url": "https://m.soxscc.info/shuku/dayvisit_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "日点击-完本",
+      "url": "https://m.soxscc.info/shuku/dayvisit_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "总推荐-全部",
+      "url": "https://m.soxscc.info/shuku/allvote_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "总推荐-连载",
+      "url": "https://m.soxscc.info/shuku/allvote_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "总推荐-完本",
+      "url": "https://m.soxscc.info/shuku/allvote_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "月推荐-全部",
+      "url": "https://m.soxscc.info/shuku/monthvote_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "月推荐-连载",
+      "url": "https://m.soxscc.info/shuku/monthvote_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "月推荐-完本",
+      "url": "https://m.soxscc.info/shuku/monthvote_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "周推荐-全部",
+      "url": "https://m.soxscc.info/shuku/weekvote_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "周推荐-连载",
+      "url": "https://m.soxscc.info/shuku/weekvote_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "周推荐-完本",
+      "url": "https://m.soxscc.info/shuku/weekvote_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "总收藏-全部",
+      "url": "https://m.soxscc.info/shuku/goodnum_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "总收藏-连载",
+      "url": "https://m.soxscc.info/shuku/goodnum_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "总收藏-完本",
+      "url": "https://m.soxscc.info/shuku/goodnum_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "字数-全部",
+      "url": "https://m.soxscc.info/shuku/size_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "字数-连载",
+      "url": "https://m.soxscc.info/shuku/size_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "字数-完本",
+      "url": "https://m.soxscc.info/shuku/size_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "新书入库-全部",
+      "url": "https://m.soxscc.info/shuku/postdate_${key}_0_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "新书入库-连载",
+      "url": "https://m.soxscc.info/shuku/postdate_${key}_1_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "新书入库-完本",
+      "url": "https://m.soxscc.info/shuku/postdate_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    },
+    {
+      "title": "新书入库-完本",
+      "url": "https://m.soxscc.info/shuku/postdate_${key}_2_${page}.html",
+      "page": 1,
+      "size": 50,
+      "categories": [
+        {
+          "key": "0",
+          "value": "全部"
+        },
+        {
+          "key": "1",
+          "value": "玄幻奇幻"
+        },
+        {
+          "key": "2",
+          "value": "武侠仙侠"
+        },
+        {
+          "key": "3",
+          "value": "科幻未来"
+        },
+        {
+          "key": "4",
+          "value": "历史军事"
+        },
+        {
+          "key": "5",
+          "value": "游戏竞技"
+        },
+        {
+          "key": "6",
+          "value": "灵异悬疑"
+        },
+        {
+          "key": "7",
+          "value": "都市生活"
+        },
+        {
+          "key": "8",
+          "value": "青春校园"
+        },
+        {
+          "key": "9",
+          "value": "古代言情"
+        },
+        {
+          "key": "10",
+          "value": "现代言情"
+        },
+        {
+          "key": "11",
+          "value": "幻想奇缘"
+        },
+        {
+          "key": "12",
+          "value": "耽美同人"
+        },
+        {
+          "key": "13",
+          "value": "新书入库"
+        }
+      ],
+      "list": "ul.list > li",
+      "name": ".bookname > a",
+      "author": "a.layui-btn.layui-btn-xs.layui-bg-cyan",
+      "cover": "img",
+      "detail": ".bookname > a"
+    }
+  ]
+}

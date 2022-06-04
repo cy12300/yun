@@ -1,0 +1,36 @@
+{
+    "name": "新八一中文",
+    "url": "www.x81zw.co",
+    "version": 103,
+    "search": {
+        "url": "https://www.x81zw.co/search.php?keyword=${key}",
+        "charset": "UTF-8",
+        "list": "div.result-list.gameblock-result-list > div.result-item.result-game-item",
+        "name": "h3.result-item-title.result-game-item-title > a.result-game-item-title-link",
+        "author": "p.result-game-item-info-tag > span:nth-child(2)",
+        "cover": "a.result-game-item-pic-link > img.result-game-item-pic-link-img",
+        "detail": "h3.result-item-title.result-game-item-title > a.result-game-item-title-link@attr->href"
+    },
+    "detail": {
+        "summary": "div#intro",
+        "status": "div#info > p:nth-child(3)",
+        "category":"div.con_top > a:nth-child(2)",
+        "update": "div#info > p:nth-child(5)@match->(?<=最后更新：)(.+)",
+        "lastChapter": "div#info > p:nth-child(4) > a",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "dl>dd",
+        "name": "dd>a",          
+        "chapter": "dd>a@attr->href"
+    },
+    "chapter": {
+        "content": "div#content",
+        "purify": [
+            "https://www.x81zw.co","新八一中文网为你提供最快的.*免费阅读。","请退出转码页面，请下载爱阅小说app 阅读最新章节。","网站即将关闭，下载爱阅app免费看最新内容","网页版章节内容慢，请下载爱阅小说app阅读最新内容"            
+        ]       
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }    
+}

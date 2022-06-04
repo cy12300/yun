@@ -1,0 +1,32 @@
+{
+    "name": "小说旗3",
+    "url": "www.xs7.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.xs7.com/search.html@post->s=articlename&searchkey=${key}&Submit=",
+        "charset": "UTF-8",
+        "list": "#alistbox",
+        "name": "h2 > a",
+        "author": ".title > span@match->(?<=作者：)(.+)",
+        "cover": "img",
+        "detail": "h2 > a"
+    },
+    "detail": {
+        "summary": "p.introtxt@match->(?<=：)(.+)",               
+        "category":"meta[property=og:novel:category]@attr->content",
+		"update": "#info > p:nth-child(10)@match->(?<=更新时间：)(.+)",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "dl > dd",
+        "name": "dd > a",          
+        "chapter": "dd > a@attr->href"
+    },
+    "chapter": {
+        "content": "#content > p",
+        "purify": [
+            ""            
+        ]      
+    }
+}

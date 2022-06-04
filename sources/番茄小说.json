@@ -1,0 +1,46 @@
+{
+    "name": "番茄小说",
+    "url": "api5-normal-lf.fqnovel.com",
+    "version": 103,
+    "search": {
+        "url": "https://api5-normal-lf.fqnovel.com/reading/bookapi/search/page/v/?offset=0&query=${key}&iid=2665637677906061&aid=1967",
+        "charset": "UTF-8",
+        "list": "$..data[*]",
+        "name": "$..book_name",
+        "author": "$..author",
+        "cover": "$..thumb_url",
+        "detail": "https://api5-normal-lf.fqnovel.com/reading/bookapi/directory/all_items/v/?need_version=true&book_id=${$.book_id}&iid=2665637677906061&aid=1967&app_name=novelapp&version_code=495"
+    },
+    "detail": {
+        "summary": "$..abstract",
+        "status": "$..status",
+        "category":"$..category",
+        "words":"$..word_number",  
+        "update": "$..last_chapter_update_time",
+        "lastChapter": "$..last_chapter_title",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "$..item_data_list[*]",
+        "name": "$..title",          
+        "chapter": "https://novel.snssdk.com/api/novel/book/reader/full/v1/?group_id=${$..item_id}&item_id=${$..item_id}"
+    },
+    "chapter": {
+        "content": "$..content",
+        "filter": ["@div"]        
+    },
+    "rank": [
+                {
+            "title":"书库",
+            "url": "https://api5-normal-lf.fqnovel.com/reading/bookapi/new_category/landing/v/?genre_type=0&limit=10&source=front_category&category_id=${key}&offset=${page}&query_gender=1&iid=1099935039893805&aid=1967&app_name=novelapp&version_code=287",
+            "page": 0,
+            "size": 10,
+            "categories": [{"value": "玄幻","key": "7"}, {"value": "神豪","key": "20"}, {"value": "鉴宝","key": "17"}, {"value": "三国","key": "67"}, {"value": "二次元","key": "39"}, {"value": "历史","key": "12"}, {"value": "美食","key": "78"}, {"value": "奶爸","key": "42"}, {"value": "娱乐圈","key": "43"}, {"value": "洪荒","key": "66"}, {"value": "大唐","key": "73"}, {"value": "外卖","key": "75"}, {"value": "末世","key": "68"}, {"value": "都市","key": "1"}, {"value": "宠物","key": "74"}, {"value": "学霸","key": "82"}, {"value": "游戏动漫","key": "57"}, {"value": "科幻","key": "8"}, {"value": "体育","key": "15"}, {"value": "直播","key": "69"}, {"value": "年代","key": "79"}, {"value": "文化历史","key": "62"}, {"value": "诸天万界","key": "71"}, {"value": "海岛","key": "40"}, {"value": "神医","key": "26"}, {"value": "明朝","key": "126"}, {"value": "武侠","key": "16"}, {"value": "灵异","key": "100"}, {"value": "星际","key": "77"}, {"value": "穿越","key": "37"}, {"value": "剑道","key": "80"}, {"value": "都市修真","key": "124"}, {"value": "赘婿","key": "25"}, {"value": "兵王","key": "27"}, {"value": "盗墓","key": "81"}, {"value": "推理","key": "61"}, {"value": "无限流","key": "70"}, {"value": "种田","key": "23"}, {"value": "战争","key": "97"}, {"value": "天才","key": "90"}, {"value": "职场","key": "127"}, {"value": "悬疑","key": "10"}, {"value": "成功励志","key": "56"}, {"value": "重生","key": "36"}, {"value": "系统","key": "19"}, {"value": "空间","key": "44"}, {"value": "腹黑","key": "92"}, {"value": "诗歌散文","key": "46"}, {"value": "家庭","key": "125"}, {"value": "影视小说","key": "45"}, {"value": "生活","key": "48"}, {"value": "都市生活","key": "2"}, {"value": "大秦","key": "377"}, {"value": "无敌","key": "384"}, {"value": "漫威","key": "374"}, {"value": "火影","key": "368"}, {"value": "西游","key": "373"}, {"value": "龙珠","key": "376"}, {"value": "聊天群","key": "381"}, {"value": "海贼","key": "370"}, {"value": "奥特同人","key": "367"}, {"value": "特种兵","key": "375"}, {"value": "反派","key": "369"}, {"value": "校花","key": "385"}, {"value": "女帝","key": "378"}, {"value": "单女主","key": "389"}, {"value": "神奇宝贝","key": "371"}, {"value": "九叔","key": "383"}, {"value": "求生","key": "379"}, {"value": "无女主","key": "391"}, {"value": "武魂","key": "386"}, {"value": "网游","key": "372"}, {"value": "都市脑洞","key": "262"}, {"value": "都市种田","key": "263"}, {"value": "都市日常","key": "261"}, {"value": "历史脑洞","key": "272"}, {"value": "玄幻脑洞","key": "257"}, {"value": "奇幻仙侠","key": "259"}, {"value": "都市青春","key": "396"}, {"value": "传统玄幻","key": "258"}, {"value": "历史古代","key": "273"}],
+            "list": "$.data..book_info[*]",
+            "name": "$.book_name",
+            "author": "$.author",
+            "cover": "$.thumb_url",
+            "detail": "https://api5-normal-lf.fqnovel.com/reading/bookapi/directory/all_items/v/?need_version=true&book_id=${$.book_id}&iid=2665637677906061&aid=1967&app_name=novelapp&version_code=495"
+        } 
+    ]
+}

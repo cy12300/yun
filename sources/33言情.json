@@ -1,0 +1,39 @@
+{
+    "name": "33言情",
+    "url": "m.33yq.org",
+    "version": 100,
+    "search": {
+        "url": "https://m.33yq.org/search.html@post->searchkey=${key}",
+        "charset": "UTF-8",
+        "list": "ul > li",
+        "name": ".bookname > a",
+        "author": ".data > a",
+        "cover": "img",
+        "detail": ".bookname > a"
+    },
+    "detail": {
+        "summary": "meta[name=description]@attr->content",               
+        "category":"a.layui-btn.layui-btn-xs.layui-btn-radius",
+        "status":"span.layui-btn.layui-btn-xs.layui-btn-radius.layui-btn-danger",
+        "words":"span.layui-btn.layui-btn-xs.layui-btn-radius.layui-bg-cyan",
+		"update": "div.detail > p:nth-child(6)@match->(?<=最后更新：)(.+)",
+        "lastChapter": "p.new > a",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "li",
+        "name": "a",          
+        "chapter": "a",
+        "page":"div.pagelist > a:matches(下一页)"
+    },
+    "chapter": {
+        "content": "div.content > p",
+        "page":"a:matches(下一页)",
+        "purify": [
+            ""            
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }        
+}

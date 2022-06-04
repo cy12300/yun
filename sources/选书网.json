@@ -1,0 +1,33 @@
+{
+  "name": "选书网",
+  "url": "www.xuanshu.com",
+  "version": 103,
+  "search": {
+    "url": "https://www.xuanshu.com/search.php@post->searchkey=${key}",
+    "charset": "UTF-8",
+    "list": "tbody > tr",
+    "name": "td.even > a",
+    "author": "tr > td:nth-child(3)",
+    "cover": "img",
+    "detail": "td.even > a"
+  },
+  "detail": {
+    "summary": "div.intro",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "category": "#info > dd > a:nth-child(2)",
+    "update": "#info > div.info_cont > div.info_des > dl:nth-child(4)@match->(?<=最后更新：)(.+)",
+    "lastChapter": "#info > div.info_cont > div.info_des > dl:nth-child(5) > a",
+    "catalog": ""
+  },
+  "catalog": {
+    "list": "div.pc_list > ul > li",
+    "name": "a",
+    "chapter": "a"
+  },
+  "chapter": {
+    "content": "#content1",
+    "purify": [
+      ""
+    ]
+  }
+}

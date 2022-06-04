@@ -1,0 +1,35 @@
+{
+    "name": "2K中文",
+    "url": "m.2kzw.cc",
+    "version": 100,
+    "search": {
+        "url": "https://m.2kzw.cc/search/@post->searchtype=all&searchkey=${key}",
+        "charset": "UTF-8",
+        "list": ".list-item",
+        "name": ".article > a",
+        "author": "span.mr15@match->(?<=作者:)(.+)",
+        "cover": "img",
+        "detail": ".article > a"
+    },
+    "detail": {
+        "summary": ".intro",               
+        "category":"meta[property=og:novel:category]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+		"update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": "li.more > a"
+    },
+    "catalog": {        
+        "list": "ul > li:gt(1)",
+        "name": "a",          
+        "chapter": "a",
+        "page":"a.index-container-btn:matches(下一页)"
+    },
+    "chapter": {
+        "content": "#nr1 > p",
+        "page":"#pb_next:matches(下一页)",
+        "purify": [
+            "第.*章.*"            
+        ]      
+    }    
+}

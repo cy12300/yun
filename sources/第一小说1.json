@@ -1,0 +1,36 @@
+{
+    "name": "第一小说1",
+    "url": "www.01xs.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.01xs.com/search.php@post->keyword=${key}",
+        "charset": "UTF-8",
+        "list": ".banner > ul",
+        "name": "li.s2 > a",
+        "author": "li.s4",
+        "detail": "li.s2 > a"
+    },
+    "detail": {
+        "cover": "meta[property=og:image]@attr->content",    
+        "summary": "meta[property=og:description]@attr->content",               
+        "status": "meta[property=og:novel:status]@attr->content",        
+        "category":"meta[property=og:novel:category]@attr->content",
+		"update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "div.chapterlist > ul > li",
+        "name": "a",          
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": [
+            ""            
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }    
+}

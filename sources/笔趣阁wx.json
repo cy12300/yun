@@ -1,0 +1,33 @@
+{
+  "name": "笔趣阁wx",
+  "url": "www.xbiquwx.la",
+  "version": 103,
+  "search": {
+    "url": "https://www.xbiquwx.la/modules/article/search.php?searchkey=${key}",
+    "charset": "UTF-8",
+    "list": "tbody > tr",
+    "name": "td.odd > a",
+    "author": "tr > td:nth-child(3)",
+    "cover": "img",
+    "detail": "td.odd > a"
+  },
+  "detail": {
+    "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "category": "meta[property=og:novel:category]@attr->content",
+    "update": "meta[property=og:novel:update_time]@attr->content",
+    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+    "catalog": ""
+  },
+  "catalog": {
+    "list": "#list > dl > dd",
+    "name": "a",
+    "chapter": "a"
+  },
+  "chapter": {
+    "content": "#content",
+    "purify": [
+      ""
+    ]
+  }
+}

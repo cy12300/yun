@@ -1,0 +1,32 @@
+{
+    "name": "番茄小说1",
+    "url": "fanqienovel.com",
+    "version": 103,
+    "search": {
+        "url": "https://fanqienovel.com/api/author/search/search_book/v1?filter=127%2C127%2C127&page_count=10&page_index=0&query_type=0&query_word=${key}",
+        "charset": "UTF-8",
+        "list": "$..search_book_data_list[*]",
+        "name": "$.book_name",
+        "author": "$.author",
+        "cover": "https://p3-tt.byteimg.com/img/${$.thumb_uri}~240x312.jpg",
+        "detail": "https://api3-normal-lf.fqnovel.com/reading/bookapi/directory/all_items/v/?need_version=true&book_id=${$.book_id}&iid=2665637677906061&aid=1967&app_name=novelapp&version_code=495"
+    },
+    "detail": {
+        "summary": "$..abstract",
+        "status": "$..status",
+        "category":"$..category",
+        "words":"$..word_number",  
+        "update": "$..last_chapter_update_time",
+        "lastChapter": "$..last_chapter_title",
+        "catalog": ""
+    },
+    "catalog": {        
+        "list": "$..item_data_list[*]",
+        "name": "$..title",          
+        "chapter": "https://novel.snssdk.com/api/novel/book/reader/full/v1/?group_id=${$..item_id}&item_id=${$..item_id}"
+    },
+    "chapter": {
+        "content": "$..content",
+        "filter": ["@div"]        
+    }
+}

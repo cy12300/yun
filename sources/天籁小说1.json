@@ -1,0 +1,35 @@
+{
+    "name": "天籁小说1",
+    "url": "m.tianlaixsw.com",
+    "version": 100,
+    "search": {
+        "url": "https://m.tianlaixsw.com/search.html@post->searchkey=${key}@header->cookie:sex=boy;Hm_lvt_f4b5a344d0e2fb92e37a9a53e374c326=1646500443,1646500464,1646500470;Hm_lpvt_f4b5a344d0e2fb92e37a9a53e374c326=1646500475@header->accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9@header->referer:https://m.tianlaixsw.com/@header->origin:https://m.tianlaixsw.com",
+        "charset": "UTF-8",
+        "list": "ul.list > li",
+        "name": ".bookname > a",
+        "author": "p.data > a",
+        "cover": "img",
+        "detail": ".bookname > a"
+    },
+    "detail": {
+        "summary": "div.intro > p",               
+        "category":"p > a.layui-btn.layui-btn-xs.layui-btn-radius",
+        "status":"p > span.layui-btn.layui-btn-xs.layui-btn-radius.layui-btn-danger",
+		"update": "div.detail > p:nth-child(6)@match->(?<=最后更新：)(.+)",
+        "lastChapter": "p.new > a",
+        "catalog": "h2.title > a"
+    },
+    "catalog": {        
+        "list": "ul.read > li",
+        "name": "a",          
+        "chapter": "a",
+        "page":"a:matches(下一页)"
+    },
+    "chapter": {
+        "content": "div.ptianlaixsw_content",
+        "page":"a:matches(下一页)",
+        "purify": [
+            "7天免广告阅读特权卡，所有注册用户均可免费领取！！","喜欢(.+)请大家收藏：(.+)"            
+        ]      
+    }
+}

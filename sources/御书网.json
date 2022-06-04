@@ -1,0 +1,87 @@
+{
+    "name": "御书网",
+    "url": "www.yushubo.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.yushubo.com/search.html?ss=${key}",
+        "charset": "UTF-8",
+        "list": "ul > li",
+        "name": "h3 > a",
+        "author": "p.author@replace->作者：",
+        "cover": "img",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",               
+        "status": "meta[property=og:novel:status]@attr->content",        
+        "category":"meta[property=og:novel:category]@attr->content",
+		"update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": "a.catalogbtn"
+    },
+    "catalog": {        
+        "list": "ul > li",
+        "name": "span > a",          
+        "chapter": "span > a"
+    },
+    "chapter": {
+        "content": "#BookText",
+        "page":"div.articlebtn > a:matches(下一页)",
+        "purify": ["第.*章.*"]  
+    },
+        "rank":
+        [
+          {
+            "title":"男频完结",
+            "url": "https://www.yushubo.com${key}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "/all/id/52/serialize/1/order/update_time+desc.html?page=${page}", "value": "更新时间"}, {"key": "/all/id/52/serialize/1/order/id+desc.html?page=${page}", "value": "添加时间"}, {"key": "/all/id/52/serialize/1/order/hits_month+desc.html?page=${page}", "value": "月人气榜"}, {"key": "/all/id/52/serialize/1/order/update_time+desc.html?page=${page}", "value": "总人气榜"}, {"key": "/all/serialize/1/id/55.html?page=${page}", "value": "玄幻奇幻"}, {"key": "/all/serialize/1/id/57.html?page=${page}", "value": "武侠修真"}, {"key": "/all/serialize/1/id/59.html?page=${page}", "value": "都市异能"}, {"key": "/all/serialize/1/id/61.html?page=${page}", "value": "历史军事"}, {"key": "/all/serialize/1/id/63.html?page=${page}", "value": "游戏竞技"}, {"key": "/all/serialize/1/id/65.html?page=${page}", "value": "科幻灭世"}, {"key": "/all/serialize/1/id/66.html?page=${page}", "value": "灵异悬疑"}, {"key": "/all/serialize/1/id/60.html?page=${page}", "value": "轻の小说"}],
+            "list": "ul.search-list > li.item.clearfix",
+            "name": "h3 > a",
+            "author": "p.author",
+            "cover": "img",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"男频连载",
+            "url": "https://www.yushubo.com${key}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "/all/id/52/serialize/0/order/update_time+desc.html?page=${page}", "value": "更新时间"}, {"key": "/all/id/52/serialize/0/order/id+desc.html?page=${page}", "value": "添加时间"}, {"key": "/all/id/52/serialize/0/order/hits_month+desc.html?page=${page}", "value": "月人气榜"}, {"key": "/all/id/52/serialize/0/order/update_time+desc.html?page=${page}", "value": "总人气榜"}, {"key": "/all/serialize/0/id/55.html?page=${page}", "value": "玄幻奇幻"}, {"key": "/all/serialize/0/id/57.html?page=${page}", "value": "武侠修真"}, {"key": "/all/serialize/0/id/59.html?page=${page}", "value": "都市异能"}, {"key": "/all/serialize/0/id/61.html?page=${page}", "value": "历史军事"}, {"key": "/all/serialize/0/id/63.html?page=${page}", "value": "游戏竞技"}, {"key": "/all/serialize/0/id/65.html?page=${page}", "value": "科幻灭世"}, {"key": "/all/serialize/0/id/66.html?page=${page}", "value": "灵异悬疑"}, {"key": "/all/serialize/0/id/60.html?page=${page}", "value": "轻の小说"}],
+            "list": "ul.search-list > li.item.clearfix",
+            "name": "h3 > a",
+            "author": "p.author",
+            "cover": "img",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"女频完结",
+            "url": "https://www.yushubo.com${key}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "/all/id/54/serialize/1/order/update_time+desc.html?page=${page}", "value": "更新时间"}, {"key": "/all/id/54/serialize/1/order/id+desc.html?page=${page}", "value": "添加时间"}, {"key": "/all/id/54/serialize/1/order/hits_month+desc.html?page=${page}", "value": "月人气榜"}, {"key": "/all/id/54/serialize/1/order/update_time+desc.html?page=${page}", "value": "总人气榜"}, {"key": "/all/serialize/1/id/67.html?page=${page}", "value": "现代言情"}, {"key": "/all/serialize/1/id/68.html?page=${page}", "value": "古代言情"}, {"key": "/all/serialize/1/id/69.html?page=${page}", "value": "幻想言情"}, {"key": "/all/serialize/1/id/70.html?page=${page}", "value": "青春校园"}, {"key": "/all/serialize/1/id/71.html?page=${page}", "value": "同人作品"}, {"key": "/all/serialize/1/id/72.html?page=${page}", "value": "惊悚恐怖"}, {"key": "/all/serialize/1/id/73.html?page=${page}", "value": "次元专区"}],
+            "list": "ul.search-list > li.item.clearfix",
+            "name": "h3 > a",
+            "author": "p.author",
+            "cover": "img",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"女频连载",
+            "url": "https://www.yushubo.com${key}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "/all/id/54/serialize/0/order/update_time+desc.html?page=${page}", "value": "更新时间"}, {"key": "/all/id/54/serialize/0/order/id+desc.html?page=${page}", "value": "添加时间"}, {"key": "/all/id/54/serialize/0/order/hits_month+desc.html?page=${page}", "value": "月人气榜"}, {"key": "/all/id/54/serialize/0/order/update_time+desc.html?page=${page}", "value": "总人气榜"}, {"key": "/all/serialize/0/id/67.html?page=${page}", "value": "现代言情"}, {"key": "/all/serialize/0/id/68.html?page=${page}", "value": "古代言情"}, {"key": "/all/serialize/0/id/69.html?page=${page}", "value": "幻想言情"}, {"key": "/all/serialize/0/id/70.html?page=${page}", "value": "青春校园"}, {"key": "/all/serialize/0/id/71.html?page=${page}", "value": "同人作品"}, {"key": "/all/serialize/0/id/72.html?page=${page}", "value": "惊悚恐怖"}, {"key": "/all/serialize/0/id/73.html?page=${page}", "value": "次元专区"}],
+            "list": "ul.search-list > li.item.clearfix",
+            "name": "h3 > a",
+            "author": "p.author",
+            "cover": "img",
+            "detail": "h3 > a"
+        }        
+    ],
+    "auth": {
+                "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+                    }       
+    
+}

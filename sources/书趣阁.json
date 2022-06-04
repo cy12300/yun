@@ -1,0 +1,36 @@
+{
+    "name": "书趣阁",
+    "url": "www.shuquge.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.shuquge.com/search.php@post->searchkey=${key}",
+        "charset": "UTF-8",
+        "list": "div.bookbox",
+        "name": "h4 > a",
+        "author": "div.author@match->(?<=作者：)(.+)",
+        "cover": "img",
+        "detail": "h4 > a"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "category": "meta[property=og:novel:category]@attr->content",
+    "update": "meta[property=og:novel:update_time]@attr->content",
+    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+    "catalog": ""
+    },
+    "catalog": {        
+        "list": "div.listmain >dl > dd",
+        "name": "dd > a",          
+        "chapter": "dd > a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": [
+            "看小说,去书趣阁.*阅读环境好.","http.*html","请记住本书.*com","thu.*2013","八一中.*"            
+        ]      
+    },
+    "auth": {
+        "header": "User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }
+}

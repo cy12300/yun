@@ -1,0 +1,212 @@
+{
+    "name": "纵横中文",
+    "url": "www.zongheng.com",
+    "version": 100,
+    "search": {
+        "url": "http://search.zongheng.com/s?keyword=${key}&pageNo=1&sort=&isFromHuayu=",
+		"charset": "utf-8",
+        "list": "div.search-tab > div.search-result-list.clearfix",
+        "name": "h2.tit > a",   
+        "author": "div.bookinfo > a",     
+        "cover": "img",
+        "detail": "h2.tit > a"
+    },
+    "detail": {        
+        "summary": "div.book-dec.Jbook-dec.hide > p",
+        "status": "div.book-label > a.state",
+        "category":"div.book-label > a.label",
+        "update": "div.time",
+        "lastChapter": "div.tit > a",
+        "words":"div.nums > span > i",
+        "catalog": "div.fr.link-group > a.all-catalog"
+    },
+    "catalog": {
+        "list": "div.volume-list > div",
+        "booklet": {
+            "name": "div.volume@match->(?<=])(.+)",
+            "list": "ul>li"
+        },
+        "name": "li>a",
+        "chapter": "li>a"
+    },
+    "chapter": {
+        "content": "div.content",
+        "purify": [""]
+    },
+    "rank": [        
+        {
+            "title":"排行榜",
+            "url": "http://www.zongheng.com/rank/details.html?rt=1&d=${key}&p=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [{"key": "1&i=2", "value": "月票"}, {"key": "3", "value": "畅销"}, {"key": "4", "value": "新书"}, {"key": "5", "value": "点击"}, {"key": "6", "value": "推荐"}, {"key": "7", "value": "捧场"}, {"key": "8", "value": "完结"}, {"key": "9", "value": "订阅"}, {"key": "10", "value": "更新"}],
+            "list": "div.rankpage_box > div.rank_d_list.borderB_c_dsh.clearfix",
+            "name": "div.rank_d_b_name > a",
+            "author": "div.rank_d_b_cate > a",
+            "cover": "img",
+            "detail": "div.rank_d_b_name > a"
+        },
+        {
+            "title":"男频"
+        },
+        {
+            "title":"武侠仙侠",
+            "url": "http://book.zongheng.com/store/c1/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b0/u7", "value": "全部"}, {"key": "c0/b0/u2", "value": "总推荐"}, {"key": "c0/b0/u4", "value": "总收藏"}, {"key": "c0/b0/u1", "value": "总点击"}, {"key": "/c3116/b0/u6", "value": "变身情缘"}, {"key": "/c1001/b0/u6", "value": "西方奇幻"}, {"key": "/c1002/b0/u6", "value": "东方玄幻"}, {"key": "/c1003/b0/u6", "value": "异世大陆"}, {"key": "/c1004/b0/u6", "value": "转世重生"}, {"key": "/c1005/b0/u6", "value": "异术超能"}, {"key": "/c1006/b0/u6", "value": "上古神话"}, {"key": "/c1007/b0/u6", "value": "魔法校园"}, {"key": "/c1008/b0/u6", "value": "王朝争霸"}, {"key": "/c1009/b0/u6", "value": "吸血传奇"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"玄幻奇幻",
+            "url": "http://book.zongheng.com/store/c3/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b0/u7", "value": "全部"}, {"key": "c0/b0/u2", "value": "总推荐"}, {"key": "c0/b0/u4", "value": "总收藏"}, {"key": "c0/b0/u1", "value": "总点击"}, {"key": "/c1031/b0/u6", "value": "古典仙侠"}, {"key": "/c1032/b0/u6", "value": "现代修真"}, {"key": "/c1033/b0/u6", "value": "新派武侠"}, {"key": "/c1034/b0/u6", "value": "传统武侠"}, {"key": "/c3117/b0/u6", "value": "奇幻修真"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },  
+        {
+            "title":"历史军事",
+            "url": "http://book.zongheng.com/store/c6/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b0/u7", "value": "全部"}, {"key": "c0/b0/u2", "value": "总推荐"}, {"key": "c0/b0/u4", "value": "总收藏"}, {"key": "c0/b0/u1", "value": "总点击"}, {"key": "/c1062/b0/u6", "value": "穿越历史"}, {"key": "/c1063/b0/u6", "value": "架空历史"}, {"key": "/c1064/b0/u6", "value": "历史传记"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"都市娱乐",
+            "url": "http://book.zongheng.com/store/c9/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b0/u7", "value": "全部"}, {"key": "c0/b0/u2", "value": "总推荐"}, {"key": "c0/b0/u4", "value": "总收藏"}, {"key": "c0/b0/u1", "value": "总点击"}, {"key": "/c4007/b0/u6", "value": "现实题材"}, {"key": "/c1090/b0/u6", "value": "职场商战"}, {"key": "/c1095/b0/u6", "value": "江湖情仇"}, {"key": "/c1096/b0/u6", "value": "都市重生"}, {"key": "/c1097/b0/u6", "value": "都市异能"}, {"key": "/c1098/b0/u6", "value": "都市生活"}, {"key": "/c1099/b0/u6", "value": "青春校园"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"科幻游戏",
+            "url": "http://book.zongheng.com/store/c15/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b0/u7", "value": "全部"}, {"key": "c0/b0/u2", "value": "总推荐"}, {"key": "c0/b0/u4", "value": "总收藏"}, {"key": "c0/b0/u1", "value": "总点击"}, {"key": "/c1152/b0/u6", "value": "穿梭时空"}, {"key": "/c1153/b0/u6", "value": "末世危机"}, {"key": "/c1154/b0/u6", "value": "进化变异"}, {"key": "/c1157/b0/u6", "value": "星际争霸"}, {"key": "/c3118/b0/u6", "value": "游戏攻略"}, {"key": "/c3119/b0/u6", "value": "游戏小说"}, {"key": "/c3120/b0/u6", "value": "游戏评论"}, {"key": "/c3121/b0/u6", "value": "游戏设定"}, {"key": "/c1332/b0/u6", "value": "虚拟网游"}, {"key": "/c1150/b0/u6", "value": "科技时代"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"悬疑灵异",
+            "url": "http://book.zongheng.com/store/c18/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b0/u7", "value": "全部"}, {"key": "c0/b0/u2", "value": "总推荐"}, {"key": "c0/b0/u4", "value": "总收藏"}, {"key": "c0/b0/u1", "value": "总点击"}, {"key": "/c1180/b0/u6", "value": "推理悬念"}, {"key": "/c1182/b0/u6", "value": "恐怖惊悚"}, {"key": "/c1183/b0/u6", "value": "灵异神怪"}, {"key": "/c1184/b0/u6", "value": "探险异闻"}, {"key": "/c1337/b0/u6", "value": "神秘文化"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"竞技同人",
+            "url": "http://book.zongheng.com/store/c21/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b0/u7", "value": "全部"}, {"key": "c0/b0/u2", "value": "总推荐"}, {"key": "c0/b0/u4", "value": "总收藏"}, {"key": "c0/b0/u1", "value": "总点击"}, {"key": "/c1210/b0/u6", "value": "动漫同人"}, {"key": "/c1211/b0/u6", "value": "影视同人"}, {"key": "/c1212/b0/u6", "value": "小说同人"}, {"key": "/c1213/b0/u6", "value": "游戏同人"}, {"key": "/c1122/b0/u6", "value": "电子竞技"}, {"key": "/c1123/b0/u6", "value": "体育竞技"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"评论文集",
+            "url": "http://book.zongheng.com/store/c24/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b0/u7", "value": "全部"}, {"key": "c0/b0/u2", "value": "总推荐"}, {"key": "c0/b0/u4", "value": "总收藏"}, {"key": "c0/b0/u1", "value": "总点击"}, {"key": "/c1240/b0/u6", "value": "个人文集"}, {"key": "/c1241/b0/u6", "value": "集体创作"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"二次元",
+            "url": "http://book.zongheng.com/store/c40/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b0/u7", "value": "全部"}, {"key": "c0/b0/u2", "value": "总推荐"}, {"key": "c0/b0/u4", "value": "总收藏"}, {"key": "c0/b0/u1", "value": "总点击"}, {"key": "/c4001/b0/u6", "value": "原生幻想"}, {"key": "/c4002/b0/u6", "value": "青春日常"}, {"key": "/c4003/b0/u6", "value": "动漫衍生"}, {"key": "/c4004/b0/u6", "value": "游戏世界"}, {"key": "/c4005/b0/u6", "value": "变身入替"}, {"key": "/c4006/b0/u6", "value": "奇妙物语"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"女频"            
+        },
+        {
+            "title":"都市言情",
+            "url": "http://book.zongheng.com/store/c31/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b1/u7", "value": "全部"}, {"key": "c0/b1/u2", "value": "总推荐"}, {"key": "c0/b1/u4", "value": "总收藏"}, {"key": "c0/b1/u1", "value": "总点击"}, {"key": "/c3106/b1/u6", "value": "青春校园"}, {"key": "/c3107/b1/u6", "value": "婚恋家庭"}, {"key": "/c3109/b1/u6", "value": "白领职场"}, {"key": "/c3122/b1/u6", "value": "都市重生"}, {"key": "/c3123/b1/u6", "value": "豪门总裁"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"古代言情",
+            "url": "http://book.zongheng.com/store/c32/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b1/u7", "value": "全部"}, {"key": "c0/b1/u2", "value": "总推荐"}, {"key": "c0/b1/u4", "value": "总收藏"}, {"key": "c0/b1/u1", "value": "总点击"}, {"key": "/c3102/b1/u6", "value": "历史传奇"}, {"key": "/c3103/b1/u6", "value": "穿越时空"}, {"key": "/c3104/b1/u6", "value": "架空历史"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"幻想时空",
+            "url": "http://book.zongheng.com/store/c33/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b1/u7", "value": "全部"}, {"key": "c0/b1/u2", "value": "总推荐"}, {"key": "c0/b1/u4", "value": "总收藏"}, {"key": "c0/b1/u1", "value": "总点击"}, {"key": "/c3101/b1/u6", "value": "奇幻玄幻"}, {"key": "/c3110/b1/u6", "value": "灵异悬疑"}, {"key": "/c3112/b1/u6", "value": "科幻游戏"}, {"key": "/c3302/b1/u6", "value": "武侠仙侠"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        },
+        {
+            "title":"短篇美文",
+            "url": "http://book.zongheng.com/store/c35/${key}/p${page}/v9/s9/t0/u0/i1/ALL.html",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "c0/b1/u7", "value": "全部"}, {"key": "c0/b1/u2", "value": "总推荐"}, {"key": "c0/b1/u4", "value": "总收藏"}, {"key": "c0/b1/u1", "value": "总点击"}, {"key": "/c3501/b1/u6", "value": "散文诗歌"}, {"key": "/c3502/b1/u6", "value": "小说文集"}],
+            "list": "div.store_collist > div.bookbox.fl",
+            "name": "div.bookname > a",
+            "author": "div.bookilnk > a",
+            "cover": "img",
+            "detail": "div.bookname > a"
+        }
+    ]
+}

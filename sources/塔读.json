@@ -1,0 +1,176 @@
+{
+    "name": "塔读小说",
+    "url": "123.56.101.109",
+    "version": 103,
+    "search": {
+        "url": "http://123.56.101.109/ci/search/result?searchcontent=${key}&page=1&type=3&readLike=0&searchType=3@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+        "charset": "UTF-8",
+        "list": "$..bookList[*]",
+        "name": "name",
+        "author": "author",
+        "cover": "picUrl",
+        "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+    },
+    "detail": {
+        "summary": "$..description",
+        "category":"$..categoryName",
+        "words":"$.data.bookInfo.numOfChars",  
+        "update": "$..newPartUpdateDate",
+        "lastChapter": "$..newPartTitle",
+        "catalog": "https://www.tadu.com/book/catalogue/${$.data.bookInfo.id}/"
+    },
+    "catalog": {        
+        "list": ".chapter>a",
+        "name": "a",          
+        "chapter": "a@replace->book/catalogue/(.+)/book/->book/"
+    },
+    "chapter": {
+        "content": "#bookPartResourceUrl@attr->value"  
+    },
+    "rank": [
+                {
+            "title":"东方玄幻",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=99&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value": "玄幻全部","key": "0"}, {"value": "热血豪情","key": "204"}, {"value": "异界大陆","key": "205"}, {"value": "王朝争霸","key": "206"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"现代都市",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=103&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"都市全部","key":"0"},{"value":"都市生活","key":"198"},{"value":"都市异能","key":"199"},{"value":"都市校园","key":"200"},{"value":"乡土生活","key":"201"},{"value":"医道圣手","key":"202"},{"value":"明星娱乐","key":"203"},{"value":"现实百态","key":"285"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"脑洞创意",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=135&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"创意全部","key":"0"},{"value":"创意玄幻","key":"237"},{"value":"创意都市","key":"236"},{"value":"创意历史","key":"401"},{"value":"创意悬疑","key":"405"},{"value":"创意奇幻","key":"406"},{"value":"创意科幻","key":"404"},{"value":"创意游戏","key":"402"},{"value":"幻想仙侠","key":"408"},{"value":"幻想武侠","key":"407"},{"value":"体育竞技","key":"411"},{"value":"创意军事","key":"409"},{"value":"同人小说","key":"235"},{"value":"其他","key":"410"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"历史架空",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=108&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"历史全部","key":"0"},{"value":"秦汉三国","key":"212"},{"value":"两晋隋唐","key":"213"},{"value":"两宋元明","key":"214"},{"value":"清朝民国","key":"215"},{"value":"其他","key":"216"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"军事战争",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=113&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"军事全部","key":"0"},{"value":"现代战争","key":"233"},{"value":"近代抗战","key":"234"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"游戏竞技",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=112&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"游戏全部","key":"0"},{"value":"虚拟网络","key":"225"},{"value":"游戏异界","key":"226"},{"value":"电子竞技","key":"227"},{"value":"体育竞技","key":"228"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"武侠仙侠",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=109&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"武仙全部","key":"0"},{"value":"仙侠修真","key":"229"},{"value":"现代修仙","key":"230"},{"value":"洪荒封神","key":"231"},{"value":"武侠国术","key":"232"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"科幻末日",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=111&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"科幻全部","key":"0"},{"value":"星际争霸","key":"217"},{"value":"未来世界","key":"218"},{"value":"末世危机","key":"219"},{"value":"时空穿梭","key":"220"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"灵异悬疑",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=128&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"灵悬全部","key":"0"},{"value":"悬疑探险","key":"221"},{"value":"都市怪谈","key":"222"},{"value":"恐怖惊悚","key":"223"},{"value":"推理侦探","key":"224"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"西方奇幻",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=107&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"奇幻全部","key":"0"},{"value":"魔法校园","key":"209"},{"value":"奇幻世界","key":"210"},{"value":"亡灵异族","key":"211"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"短篇小说",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=281&thirdcategory=${key}&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"短篇全部","key":"0"},{"value":"剧本文集","key":"282"},{"value":"小说随笔","key":"283"},{"value":"文学散文","key":"284"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        },
+        {
+            "title":"二次元",
+            "url": "http://123.56.101.109/ci/categories/secondCategorys/?categoryid=${key}&thirdcategory=0&activitytype=0&bookstatus=0&sorttype=0&chars=0&publishDate=&readingAge=1&bookType=0&page=${page}@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794",
+            "page": 1,
+            "size": 30,
+            "categories": [{"value":"异能•幻想","key":"271"},{"value":"校园•青春","key":"272"},{"value":"动漫•同人","key":"273"},{"value":"日常•变身","key":"274"},{"value":"剑与魔法","key":"275"}],
+            "list": "$..bookList[*]",
+            "name": "$.title",
+            "author": "$.authors",
+            "cover": "$.coverImage",
+            "detail": "http://123.56.101.109/ci/book/info?bookId=${$.bookId}&type=0&page=1@header->User-Agent:Mozilla/5.0 (Linux; Android 10; TAS-AN00 Build/HUAWEITAS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.186 Mobile Safari/537.36@header->X-Client:version=6.6.68.1047@header->Cookie:sessionid=0d667c82f60247a69e3e1693e3c0b794"
+        }
+    ]
+}

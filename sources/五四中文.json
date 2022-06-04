@@ -1,0 +1,35 @@
+{
+    "name": "五四中文",
+    "url": "wap.54zww.com",
+    "version": 103,
+    "search": {
+        "url": "http://wap.54zww.com/soxssss11@post->searchkey=${key}",
+        "charset": "UTF-8",
+        "list": "table",
+        "name": ".article > a",
+        "author": "span.mr15@replace->作者:->",
+        "cover": "img",
+        "detail": ".article > a"
+    },
+    "detail": {
+        "summary": "div.intro > p",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "category":"meta[property=og:novel:category]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:lastest_chapter_name]@attr->content",
+        "catalog": "li.more > a"
+    },
+    "catalog": {        
+        "list": "ul.last9 > li:gt(1)",
+        "name": "li>a",          
+        "chapter": "li>a",
+        "page":"a:matches(下一页)"        
+    },
+    "chapter": {
+        "content": "#nr1",
+        "page":"#pb_next:matches(下一页)",
+        "purify": [
+            "第.*章.*"            
+        ]     
+    }
+}
